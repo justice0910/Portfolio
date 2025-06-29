@@ -171,7 +171,7 @@ export default function OverviewSection() {
               <div className="space-y-4">
                 {[
                   { icon: "solar:star-bold", text: "Expert in Blockchain Development", color: "text-yellow-600" },
-                  { icon: "solar:cpu-bolt-bold-duotone", text: "Expert in AI Integration", color: "text-blue-600" },
+                  { icon: "solar:cpu-bolt-bold-duotone", text: "Expert in Full Stack Development", color: "text-blue-600" },
                   { icon: "solar:code-square-bold", text: "50+ Projects Delivered", color: "text-green-600" },
                 ].map((achievement, index) => (
                   <motion.div

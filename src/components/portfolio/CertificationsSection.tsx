@@ -403,7 +403,7 @@ export default function CertificationsSection() {
                   <Icon icon="solar:star-outline" className="text-white" width={18} height={18} />
                 </div>
                 <span className="text-blue-700 dark:text-blue-300 text-sm md:text-base font-semibold">
-                  13 Professional Certifications
+                  11 Professional Certifications
                 </span>
               </div>
               <div className="w-px h-6 bg-gradient-to-b from-blue-300/50 via-purple-300/50 to-blue-300/50"></div>
