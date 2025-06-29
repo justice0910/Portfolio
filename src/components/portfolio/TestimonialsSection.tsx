@@ -29,41 +29,41 @@ interface FeaturedTestimonialProps {
 
 const testimonials = [
   {
-    content: "Ramzan is great! He is very skillful and fast learner, just what you need in a developer.",
-    author: "Mohammed Swellam",
+    content: "Anton is great! He is very skillful and fast learner, just what you need in a developer.",
+    author: "David Hallett",
     role: "CEO",
-    company: "Geeky Air",
+    company: "BrewLabs",
     rating: 5,
-    project: "Events based Web App",
-    avatar: "MS",
+    project: "DeFi and Web3 utility platform",
+    avatar: "DH",
     featured: true
   },
   {
-    content: "Ramzan produced some really amazing work on the backend. He demonstrated his proficiency and efficiency by using Node.js and Javascript to successfully import a very large dataset into a MySQL database.",
-    author: "Arnel Bisnar",
-    role: "Product Manager",
-    company: "Solid Lift Parts Inc",
+    content: "Anton produced some really amazing work on the blockchain development.",
+    author: "Josh Fabian",
+    role: "CEO",
+    company: "Metagaming Inc",
     rating: 5,
-    project: "Backend Development",
-    avatar: "AB"
+    project: "Blockchain Development",
+    avatar: "JF"
   },
   {
-    content: "It's been great to work with him! Fast, active and hardworking! Ramzan architected checkersvip.com from ground up with great attention to detail and great design. He is a great team player and a great developer.",
-    author: "Gilberto Cisneros",
-    role: "CEO",
-    company: "Checkersvip.com",
+    content: "Working with him was a game-changer for our business! His expertise in front-end development transformed our website into a sleek, user-friendly masterpiece. The attention to detail, responsiveness, and creative solutions he provided exceeded our expectations.",
+    author: "Danil Tumanov",
+    role: "Project Manger",
+    company: "Creatio",
     rating: 5,
-    project: "JavaScript Applications",
-    avatar: "MR"
+    project: "Full Stack Development",
+    avatar: "DT"
   },
   {
     content: "We had a fantastic experience working with him on a recent project. He consistently delivered high-quality work, showed exceptional attention to detail, and communicated effectively throughout the process.",
-    author: "Jacek Jllaskowski",
+    author: "Oleksii Abraimov",
     role: "Project Manger ",
-    company: "Golem",
+    company: "Novatek",
     rating: 5,
     project: "Full Stack Development",
-    avatar: "ED"
+    avatar: "OA"
   },
 
 ];

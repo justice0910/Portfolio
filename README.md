@@ -1,4 +1,4 @@
-# 🚀 Muhammad Ramazan - Portfolio
+# 🚀 Anton Ryschchuck - Portfolio
 
 A stunning, modern portfolio website built with cutting-edge technologies and beautiful animations inspired by Aceternity UI design principles.
 
@@ -80,7 +80,7 @@ A stunning, modern portfolio website built with cutting-edge technologies and be
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/lightify97/portfolio.git
+   git clone https://github.com/justic0910/portfolio.git
    cd portfolio
    ```
 
@@ -252,12 +252,12 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 ## 👨‍💻 Author
 
-**Muhammad Ramazan**
+**Anton Ryschchuck**
 
 - Portfolio: [https://mramazan.dev](https://mramazan.dev)
-- GitHub: [@lightify97](https://github.com/lightify97)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/m-ramazan)
-- Email: mramazan1@yahoo.com
+- GitHub: [@markeddolphin](https://github.com/markeddolphin)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/anton-ryschchuk-276311365)
+- Email: ant3678g@gmail.com
 
 ## 🙏 Acknowledgments
 

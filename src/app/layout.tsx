@@ -7,13 +7,13 @@ import "./globals.css";
 const inter = Space_Grotesk({ subsets: ["latin"], weight: ["500", "600", "700"] });
 
 export const metadata: Metadata = {
-  title: "Muhammad Ramazan - Full Stack Developer",
-  description: "Portfolio of Muhammad Ramazan, a passionate full-stack developer specializing in modern web technologies, React, Next.js, and innovative digital solutions.",
-  keywords: "Muhammad Ramazan, Full Stack Developer, React, Next.js, Web Development, Portfolio",
-  authors: [{ name: "Muhammad Ramazan" }],
+  title: "Anton Ryschchuck - Full Stack Developer",
+  description: "Portfolio of Anton Ryschchuck, a passionate full-stack developer specializing in modern web technologies, React, Next.js, and innovative digital solutions.",
+  keywords: "Anton Ryschchuck, Full Stack Developer, React, Next.js, Web Development, Portfolio",
+  authors: [{ name: "Anton Ryschchuck" }],
   openGraph: {
-    title: "Muhammad Ramazan - Full Stack Developer",
-    description: "Portfolio of Muhammad Ramazan, a passionate full-stack developer specializing in modern web technologies.",
+    title: "Anton Ryschchuck - Full Stack Developer",
+    description: "Portfolio of Anton Ryschchuck, passionate about building scalable, secure, and high-performance web and blockchain solutions",
     type: "website",
   },
 };

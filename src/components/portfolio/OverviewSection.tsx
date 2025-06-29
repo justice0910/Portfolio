@@ -96,7 +96,7 @@ export default function OverviewSection() {
             variants={itemVariants}
             className="lg:col-span-8"
           >
-            <div className="space-y-6 md:space-y-8">
+            <div className="space-y-6 md:space-y-8 p-2">
 
               {/* Introduction Card */}
               <div className="relative p-4 md:p-6 lg:p-8 rounded-2xl md:rounded-3xl bg-gradient-to-br from-white/90 to-white/50 dark:from-gray-800/90 dark:to-gray-900/50 backdrop-blur-xl border border-white/30 dark:border-gray-700/40 shadow-2xl">
@@ -109,13 +109,13 @@ export default function OverviewSection() {
                   <div>
                     <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-gray-900 dark:text-white flex items-center gap-2 md:gap-3">
                       <span className="text-2xl sm:text-3xl md:text-4xl">👋</span>
-                      Hello, I&apos;m Muhammad Ramazan
+                      Hello, I&apos;m Anton Ryschchuk
                     </h3>
                     <p className="text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-4 md:mb-6">
-                      A passionate <span className="font-bold text-blue-600 dark:text-blue-400">Full Stack Developer</span> and
+                      A passionate <span className="font-bold text-blue-600 dark:text-blue-400">Full Stack</span> and
                       <span className="font-bold text-purple-600 dark:text-purple-400">
-                        &nbsp; AI enthusiast</span> with
-                      <span className="font-bold text-green-600 dark:text-green-400"> 5+ years</span> of experience crafting
+                        &nbsp; Blockchain</span> developer with
+                      <span className="font-bold text-green-600 dark:text-green-400"> 8+ years</span> of experience crafting
                       digital experiences that users love.
                     </p>
                   </div>
@@ -123,9 +123,7 @@ export default function OverviewSection() {
                   {/* Expanded About Content */}
                   <div className="space-y-3 md:space-y-4 border-t border-gray-200/50 dark:border-gray-700/50 pt-4 md:pt-6">
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-                      I specialize in building scalable web and mobile applications using React, Next.js, TypeScript,
-                      and modern development technologies. I thrive on turning complex problems into elegant solutions
-                      that users love.
+                    I specialize in crafting scalable, secure, and high-performance web and blockchain solutions.
                     </p>
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
                       Beyond work, I love exploring emerging technologies, contributing to open-source projects, and
@@ -141,7 +139,7 @@ export default function OverviewSection() {
                       Core Technologies
                     </h4>
                     <div className="flex flex-wrap gap-2 md:gap-3">
-                      {["AI Integration", "React", "Next.js", "TypeScript", "Node.js", "Python", "AWS", "UI/UX Design", "Healthcare IT"].map((skill, index) => (
+                      {["Solidity", "Go", "Rust", "React", "Next.js", "TypeScript", "Node.js", "Python", "AWS", "AI Integration"].map((skill, index) => (
                         <motion.span
                           key={skill}
                           initial={{ opacity: 0, scale: 0 }}
@@ -157,111 +155,12 @@ export default function OverviewSection() {
                     </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Professional Roles Grid */}
-              <div className="grid md:grid-cols-2 gap-4 md:gap-6">
-                <motion.div
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.02, y: -5 }}
-                  className="p-4 md:p-6 rounded-xl md:rounded-2xl bg-gradient-to-br from-blue-50/80 to-blue-100/50 dark:from-blue-950/30 dark:to-blue-900/20 backdrop-blur-sm border border-blue-200/50 dark:border-blue-800/30 shadow-xl flex flex-col"
-                >
-                  <div className="flex items-start gap-3 md:gap-4 mb-3 md:mb-4">
-                    <div className="p-2 md:p-3 bg-blue-500 rounded-lg md:rounded-xl shadow-lg">
-                      <Icon icon="solar:code-bold" className="text-white w-5 md:w-6 h-5 md:h-6" width={24} height={24} />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 dark:text-white text-base md:text-lg">Software Developer</h4>
-                      <p className="text-blue-600 dark:text-blue-400 font-medium text-sm md:text-base">Upwork Freelancer</p>
-                      <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-1">2020 — Present</p>
-                    </div>
-                  </div>
-                  <p className="text-gray-700 dark:text-gray-300 text-xs md:text-sm leading-relaxed mb-2 md:mb-3 flex-1">
-                    Delivering high-quality projects across diverse domains, specializing in web applications,
-                    API development, and cloud integrations.
-                  </p>
-                  <div className="flex items-center gap-2 text-xs md:text-sm mt-auto">
-                    <Icon icon="solar:star-bold" className="text-yellow-500 w-3 md:w-4 h-3 md:h-4" width={16} height={16} />
-                    <span className="font-semibold text-green-600 dark:text-green-400">Top Rated • 91% Success Score</span>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.02, y: -5 }}
-                  className="p-4 md:p-6 rounded-xl md:rounded-2xl bg-gradient-to-br from-green-50/80 to-green-100/50 dark:from-green-950/30 dark:to-green-900/20 backdrop-blur-sm border border-green-200/50 dark:border-green-800/30 shadow-xl flex flex-col"
-                >
-                  <div className="flex items-start gap-3 md:gap-4 mb-3 md:mb-4">
-                    <div className="p-2 md:p-3 bg-green-500 rounded-lg md:rounded-xl shadow-lg">
-                      <Icon icon="solar:hospital-bold" className="text-white w-5 md:w-6 h-5 md:h-6" width={24} height={24} />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 dark:text-white text-base md:text-lg">HIMS Master Trainer</h4>
-                      <p className="text-green-600 dark:text-green-400 font-medium text-sm md:text-base">Public Health Organization</p>
-                      <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-1">2019 — Present</p>
-                    </div>
-                  </div>
-                  <p className="text-gray-700 dark:text-gray-300 text-xs md:text-sm leading-relaxed mb-2 md:mb-3 flex-1">
-                    Leading digital transformation in healthcare, integrating 45+ radiology machines and
-                    training teams on modern HIMS and PACS systems.
-                  </p>
-                  <div className="flex items-center gap-2 text-xs md:text-sm mt-auto">
-                    <Icon icon="solar:shield-check-bold" className="text-blue-500 w-3 md:w-4 h-3 md:h-4" width={16} height={16} />
-                    <span className="font-semibold text-blue-600 dark:text-blue-400">Healthcare IT Specialist</span>
-                  </div>
-                </motion.div>
-              </div>
+              </div>           
             </div>
           </motion.div>
 
           {/* Enhanced Sidebar */}
           <motion.div variants={itemVariants} className="lg:col-span-4 space-y-6 mt-6 lg:mt-0">
-            {/* Contact Card */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-purple-50/90 to-pink-50/90 dark:from-purple-950/30 dark:to-pink-950/30 backdrop-blur-sm border border-white/30 dark:border-gray-700/40 shadow-xl">
-              <h4 className="font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-                <Icon icon="solar:chat-round-dots-bold" className="text-purple-500 w-5 h-5" width={20} height={20} />
-                Let&apos;s Connect
-              </h4>
-              <div className="space-y-3">
-                <motion.a
-                  href="mailto:mramazan1@yahoo.com"
-                  whileHover={{ scale: 1.02, x: 4 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="flex items-center gap-3 p-3 rounded-lg bg-white/70 dark:bg-gray-800/30 hover:bg-white/90 dark:hover:bg-gray-800/50 transition-all duration-300 group border border-white/20 dark:border-gray-700/30"
-                >
-                  <div className="p-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-md group-hover:from-orange-600 group-hover:to-red-600 transition-all shadow-md">
-                    <Icon icon="solar:letter-bold" className="text-white w-4 h-4" width={16} height={16} />
-                  </div>
-                  <div>
-                    <div className="text-sm font-bold text-gray-900 dark:text-white break-all">mramazan1@yahoo.com</div>
-                  </div>
-                </motion.a>
-
-                <motion.div
-                  whileHover={{ scale: 1.02, x: 4 }}
-                  className="flex items-center gap-3 p-3 rounded-lg bg-white/70 dark:bg-gray-800/30 border border-white/20 dark:border-gray-700/30"
-                >
-                  <div className="p-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-md shadow-md">
-                    <Icon icon="solar:global-bold" className="text-white w-4 h-4" width={16} height={16} />
-                  </div>
-                  <div>
-                    <div className="text-sm font-bold text-gray-900 dark:text-white">mramazan.dev</div>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  whileHover={{ scale: 1.02, x: 4 }}
-                  className="flex items-center gap-3 p-3 rounded-lg bg-white/70 dark:bg-gray-800/30"
-                >
-                  <div className="p-1 bg-gradient-to-r from-red-500 to-pink-500 rounded-md shadow-md border border-white/20 dark:border-gray-700/30">
-                    <Icon icon="solar:map-point-bold" className="text-white w-4 h-4" width={16} height={16} />
-                  </div>
-                  <div>
-                    <div className="text-sm font-bold text-gray-900 dark:text-white">Islamabad, Pakistan</div>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
 
             {/* Achievement Highlights */}
             <div className="p-6 rounded-2xl bg-gradient-to-br from-amber-50/90 to-yellow-50/90 dark:from-amber-950/30 dark:to-yellow-950/30 backdrop-blur-sm border border-white/30 dark:border-gray-700/40 shadow-xl">
@@ -271,7 +170,7 @@ export default function OverviewSection() {
               </h4>
               <div className="space-y-4">
                 {[
-                  { icon: "solar:star-bold", text: "Top Rated on Upwork", color: "text-yellow-600" },
+                  { icon: "solar:star-bold", text: "Expert in Blockchain Development", color: "text-yellow-600" },
                   { icon: "solar:cpu-bolt-bold-duotone", text: "Expert in AI Integration", color: "text-blue-600" },
                   { icon: "solar:code-square-bold", text: "50+ Projects Delivered", color: "text-green-600" },
                 ].map((achievement, index) => (

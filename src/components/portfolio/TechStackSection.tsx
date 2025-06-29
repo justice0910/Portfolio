@@ -199,48 +199,39 @@ const techStackData: Record<string, TechItem[]> = {
       yearsUsed: 5
     },
   ],
-  "AI & Integration": [
+  "Blockchain": [
     {
-      name: "OpenAI",
-      icon: "simple-icons:openai",
+      name: "Solidity",
+      icon: "skill-icons:solidity",
       level: "Expert",
-      category: "AI & Integration",
-      description: "AI-powered applications and chatbots",
+      category: "Blockchain",
+      description: "High-level, statically typed language",
+      yearsUsed: 4
+    },
+    {
+      name: "Go",
+      icon: "skill-icons:golang",
+      level: "Expert",
+      category: "Blockchain",
+      description: "Statically typed, compiled programming language",
       yearsUsed: 2
     },
     {
-      name: "LangChain",
-      icon: "simple-icons:langchain",
+      name: "Rust",
+      icon: "skill-icons:rust",
       level: "Expert",
-      category: "AI & Integration",
-      description: "Framework for developing LLM applications",
-      yearsUsed: 1
-    },
-    {
-      name: "Vercel AI SDK",
-      icon: "skill-icons:vercel-light",
-      level: "Expert",
-      category: "AI & Integration",
-      description: "Building AI-powered streaming UIs",
-      yearsUsed: 1
-    },
-    {
-      name: "Stripe",
-      icon: "logos:stripe",
-      level: "Intermediate",
-      category: "AI & Integration",
-      description: "Payment processing integration",
+      category: "Blockchain",
+      description: "Systems programming language",
       yearsUsed: 2
     },
     {
-      // vector database
-      name: "Vector Database",
-      icon: "ph:vector-three-duotone",
-      level: "Intermediate",
-      category: "AI & Integration",
-      description: "Vector database for storing and querying embeddings",
-      yearsUsed: 1
-    }
+      name: "Web3.js",
+      icon: "devicon:web3js",
+      level: "Expert",
+      category: "Blockchain",
+      description: "JavaScript library for Ethereum blockchain interaction",
+      yearsUsed: 4
+    },
   ],
 };
 

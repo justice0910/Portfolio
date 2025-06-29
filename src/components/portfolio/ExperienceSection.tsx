@@ -6,36 +6,49 @@ import SectionHeader from "./SectionHeader";
 
 const experience = [
   {
-    role: "Software Developer",
-    company: "Upwork",
-    period: "January 2020 — Present",
-    type: "Freelance",
-    companyIcon: "fa6-brands:square-upwork",
-    companyColor: "from-green-500 to-green-600",
-    description: "Delivered high-quality projects across diverse domains, including web and mobile applications, API development, and cloud integrations (AWS, GCP).",
+    role: "Senior Full Stack Developer",
+    company: "Remote Bob, London",
+    period: "December 2023 — November 2024",
+    type: "Remote",
+    companyIcon: "ic:baseline-person",
+    companyColor: "from-green-500 to-yellow-600",
+    description: "Implemented a sophisticated, high-performance company management system optimized for business efficiency and operational excellence.",
     achievements: [
-      "Achieved Top-Rated status with a 91% job success score",
-      "Completed 10+ projects focusing on scalable solutions",
-      "Consistently praised for skillfulness, quick learning, and strong communication",
-      "Earned repeated engagements through reliability and expertise"
+      "Cut task allocation and scheduling time by 30%",
+      "Revamped interface achieved 95% user satisfaction, enhancing system usability for employees and admins",
+      "Cloud migration supported 50% more users without performance issues, accommodating workforce growth",
+      "Real-time dashboards reduced decision-making time by 40% for resource and invoicing tasks"
     ],
     technologies: ["JavaScript", "Python", "Node.js", "AWS", "GCP", "OpenAI API", "LangChain"]
   },
   {
-    role: "HIMS Master Trainer / PACS Specialist",
-    company: "Public Health Organization, Islamabad",
-    period: "July 2019 — Present",
+    role: "Senior Full Stack Developer",
+    company: "Creatio, Kyiv",
+    period: "May 2021 — November 2023",
     type: "Full-time",
-    companyColor: "from-blue-500 to-blue-600",
-    companyIcon: "mdi:hospital-building",
-    description: "Spearheaded organizational transformation from paper-based manual systems to completely integrated HIMS and PACS (Picture Archiving and Communication System).",
+    companyColor: "from-blue-500 to-red-600",
+    companyIcon: "simple-icons:creativetechnology",
+    description: "Participated in Creatio Academic website dev.",
     achievements: [
-      "Led integration of 45+ radiology machines (CT, MRI, X-Ray, Ultrasound)",
-      "Ensured active monitoring for integration issues",
-      "Acted as master trainer and led support team",
-      "Communicated issues and requirements to backend teams"
+      "Developed a dynamic user interface using JavaScript and React.js framework.",
+      "Implemented a backend system to manage educational content, such as tutorials, videos, and certification modules.",
+      "Developed advanced search and filtering functionalities to help users quickly locate relevant courses, documentation, or webinars."
     ],
-    technologies: ["HIMS", "PACS", "System Integration", "Healthcare IT", "Training & Support"]
+    technologies: ["React", "PHP", "Bootstrapt", "jQuery", "AWS"]
+  },
+  {
+    role: "Full Stack Developer",
+    company: "Novatek, Kyiv",
+    period: "August 2019 — February 2021",
+    type: "Full-time",
+    companyColor: "from-blue-500 to-yellow-600",
+    companyIcon: "cbi:extractor-fan",
+    description: "Participated in Creatio Website Development",
+    achievements: [
+      "Built responsive frontend with JavaScript, cutting load times by 40% and boosting engagement by 25%",
+      "Optimized backend and database, slashing query times.",
+    ],
+    technologies: ["Javascript", "Typescript", "TailwindCSS", "MongoDB", "Express"]
   }
 ];
 
@@ -266,7 +279,7 @@ export default function ExperienceSection() {
               whileHover={{ scale: 1.05, y: -5 }}
               className="group p-6 md:p-8 rounded-xl md:rounded-2xl bg-gradient-to-br from-blue-50/50 to-blue-100/30 dark:from-blue-950/20 dark:to-blue-900/10 border border-blue-200/30 dark:border-blue-800/20 hover:border-blue-300/50 dark:hover:border-blue-600/30 transition-all duration-500"
             >
-              <div className="text-4xl md:text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">5+</div>
+              <div className="text-4xl md:text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">8+</div>
               <div className="text-gray-600 dark:text-gray-400 font-medium text-base md:text-lg">Years Experience</div>
             </motion.div>
 

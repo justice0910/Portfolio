@@ -24,20 +24,6 @@ type Certificate = {
 
 const certifications: Certificate[] = [
   {
-    title: "DevOps Essentials",
-    provider: "IBM",
-    platform: "Coursera",
-    issued: "November 2023",
-    credentialId: "P67DLWJP2GL7",
-    skills: ["Continuous Integration", "DevOps", "Product Development", "IaaC"],
-    providerIcon: "lineicons:ibm",
-    platformIcon: "logos:coursera",
-    color: "from-blue-500 to-blue-600",
-    certificatePreview: "/certificates/P67DLWJP2GL7_DEVOPS.png",
-    providerIconSize: 64,
-    platformIconSize: 88
-  },
-  {
     title: "Git and GitHub Essentials",
     provider: "IBM",
     platform: "Coursera",
@@ -106,20 +92,6 @@ const certifications: Certificate[] = [
     platformIcon: "logos:coursera",
     color: "from-blue-500 to-purple-600",
     certificatePreview: "/certificates/2Y8NRQC5MP96_INTRO_BE.png",
-    providerIconSize: 64,
-    platformIconSize: 88
-  },
-  {
-    title: "Django Web Framework",
-    provider: "Meta",
-    platform: "Coursera",
-    issued: "February 2023",
-    credentialId: "3YRA842UKERB",
-    skills: ["Django", "Python", "Web Framework", "MVC Architecture"],
-    providerIcon: "logos:meta-icon",
-    platformIcon: "logos:coursera",
-    color: "from-blue-500 to-purple-600",
-    certificatePreview: "/certificates/3YRA842UKERB_DJANGO.png",
     providerIconSize: 64,
     platformIconSize: 88
   },

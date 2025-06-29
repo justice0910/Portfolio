@@ -7,72 +7,62 @@ import SectionHeader from "./SectionHeader";
 
 const projects = [
   {
-    title: "Checkersvip.com",
-    subtitle: "Professional Online Checkers Platform",
-    description: "A comprehensive multiplayer American checkers platform designed for competitive play with real-time communication capabilities. Currently undergoing official recognition process with the American Checkers Federation (ACF).",
+    title: "Brewlabs",
+    subtitle: "DeFi and Web3 Utility Platform",
+    description: "Brewlabs is a cryptocurrency project focused on empowering token launches and DeFi solutions through tools like BrewSwap (a decentralized exchange), cross-chain bridges, staking platforms, airdrop tools, and a bot marketplace",
     features: [
-      "Real-time multiplayer gameplay with WebSocket technology",
-      "Advanced drag-and-drop game mechanics using DnDKit",
-      "Live chat system with emoji support and moderation",
-      "Player ranking and tournament management system",
-      "Spectator mode with real-time game observation",
-      "Mobile-responsive design for cross-platform play",
-      "Game replay and analysis tools",
-      "Social features including friend lists and challenges"
+      "Decentralized exchange for seamless token swapping with low fees and cross-chain compatibility.",
+      "Staking contracts and liquidity pools to incentivize user participation and reward BREW token holders.",
+      "Automated airdrop distribution system to support token launches and community engagement.",
+      "Internal audits and collaborated with CertiK to identify and resolve vulnerabilities, ensuring robust security.",
     ],
     deliverables: [
-      "Fully functional web application deployed on production",
-      "Real-time multiplayer game engine",
-      "User authentication and profile management",
-      "Admin dashboard for game moderation",
-      "Tournament management system",
-      "Mobile-optimized responsive interface",
-      "Integration with payment systems for premium features"
+      "Secure, audited smart contracts for the BREW token and associated DeFi tools.",
+      "Fully functional BrewSwap DEX with a user-friendly interface and cross-chain support.",
+      "Staking and yield farming protocols",
+      "Interoperability between Binance Smart Chain, Polygon, and Ethereum.",
+      "Airdrop tool to streamline token distribution for partner projects, reducing manual overhead.",
+      "Technical documentation and user guides for DeFi tools, hosted on Gitbook",
     ],
-    tech: ["Next.js", "NextUI", "Tailwind CSS", "DnDKit", "Fastify", "Redis", "Socket.io", "PostgreSQL", "Prisma", "JWT Authentication", "Stripe API"],
+    tech: ["Solidity", "Truffle", "Tailwind CSS", "Web3.js", "Node.js", "Next.js"],
     github: "https://github.com",
-    live: "https://checkersvip.com",
+    live: "https://brewlabs.info",
     gradient: "from-blue-500 to-cyan-500",
     status: "Live",
-    category: "Web Application",
+    category: "Blockchain Application",
     highlight: "Featured",
-    timeline: "6 months",
-    clientType: "Gaming Industry"
+    timeline: "20 months",
+    clientType: "Cryptocurrency enthusiasts"
   },
   {
-    title: "AskRudy.ai",
-    subtitle: "AI-Powered Document Intelligence Platform",
-    description: "An advanced RAG-based AI chatbot that revolutionizes document interaction through multilingual translation and intelligent conversation capabilities. Features cutting-edge OpenAI multimodal technology for screenshot analysis and real-time text translation.",
+    title: "Ender Protocol",
+    subtitle: "Decentralized Liquid Staking and Metaverse Integration",
+    description: "a liquid staking protocol leveraging Ethereum’s blockchain to enable concentrated yield tokens and liquid staking power through innovative LST-bond mechanisms.",
     features: [
-      "RAG (Retrieval-Augmented Generation) architecture for accurate responses",
-      "Multi-format document support (PDF, DOCX, TXT, images)",
-      "OpenAI GPT-4 Vision integration for screenshot analysis",
-      "Real-time multilingual translation (50+ languages)",
-      "Intelligent document chunking and vector embeddings",
-      "Conversational AI with context-aware responses",
-      "Document highlighting and annotation tools",
-      "Export capabilities for translations and summaries",
-      "Collaborative workspace for team document analysis"
+      "Bond-based yield compression mechanism enabling users to stake ETH for endETH and earn $END tokens",
+      "Infrastructure for Metaverse Bonds, connecting staking rewards to in-game assets and economies in Endworld",
+      "Whitelist NFT minting process on Zora for closed beta access",
+      "Integration Layer-2 solutions and cross-chain bridges to optimize transaction costs and scalability",
+      "APIs and smart contracts to support in-game transactions.",
+      "Design of real-time leaderboards and community dashboards for user engagement",
     ],
     deliverables: [
-      "Production-ready AI chatbot platform",
-      "Document processing pipeline with OCR capabilities",
+      "Authored and audited Solidity smart contracts for liquid staking, bond NFTs, and $END token emissions.",
+      "Fully functional dApp with a responsive front-end",
       "Multi-language translation engine",
-      "User dashboard with document management",
-      "Subscription management with Stripe integration",
-      "API documentation and integration guides",
-      "Mobile-responsive Progressive Web App",
-      "Analytics dashboard for usage tracking"
+      "RESTful APIs for seamless data flow between the blockchain, front-end, and external services",
+      "Technical documentation on GitBook",
+      "Backend services and smart contract hooks for metaverse features",
     ],
-    tech: ["Next.js", "NextUI", "Vercel AI SDK", "React-PDF", "Firebase", "LangChain", "OpenAI GPT-4", "Pinecone", "Stripe", "Tesseract.js", "PDF.js", "Zustand"],
+    tech: ["React.js", "Typescript", "TailwindCSS", "Web3.js", "Ether.js", "Express", "Node.js", "Solidity", "Truffle", "Rest APIs", "AWS"],
     github: "https://github.com",
-    live: "https://askrudy.ai",
+    live: "https://enderprotocol.io",
     gradient: "from-purple-500 to-pink-500",
     status: "Live",
-    category: "AI Platform",
+    category: "Blockchain development",
     highlight: "Featured",
-    timeline: "8 months",
-    clientType: "EdTech & Enterprise"
+    timeline: "15 months",
+    clientType: "=Crypto traders, stakers, developers, and gamers"
   }
 ];
 
@@ -155,7 +145,7 @@ export default function ProjectsSection() {
           tagText="Portfolio Showcase"
           tagIcon="solar:code-square-bold"
           heading="Featured Projects"
-          description="Discover my latest work in web development, AI integration, and digital innovation"
+          description="Discover my latest work in web development, Blockchain development, and digital innovation"
           showUnderline={true}
           centered={true}
         />
