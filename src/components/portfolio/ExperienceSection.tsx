@@ -37,6 +37,21 @@ const experience = [
     technologies: ["React", "PHP", "Bootstrapt", "jQuery", "AWS"]
   },
   {
+    role: "Blockchain Developer",
+    company: "Contractor",
+    period: "May 2020 — November 2024",
+    type: "Part-time",
+    companyColor: "from-blue-500 to-brown-600",
+    description: "Participated in blockchain developments as a contractor.",
+    achievements: [
+      "Designed and implemented smart contracts using Solidity for Ethereum-based decentralized applications.",
+      "Collaborated with cross-functional teams to integrate blockchain solutions with front-end interfaces using Web3.js.",
+      "Conducted rigorous testing and auditing of smart contracts using Truffle and Hardhat.",
+      "Developed a blockchain-based gaming platform using Ethereum and Polygon."
+    ],
+    technologies: ["Solidity", "Web3.js", "Go", "Rust", "AWS"]
+  },
+  {
     role: "Full Stack Developer",
     company: "Novatek, Kyiv",
     period: "August 2019 — February 2021",
