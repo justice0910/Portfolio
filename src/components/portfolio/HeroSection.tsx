@@ -86,36 +86,7 @@ export default function HeroSection() {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* Skills Preview */}
-        {/* <motion.div
-          className="flex flex-wrap justify-center gap-3 mb-10"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2 }}
-        >
-          {[
-            { icon: "skill-icons:react-dark", label: "React" },
-            { icon: "skill-icons:typescript", label: "TypeScript" },
-            { icon: "skill-icons:nextjs-dark", label: "Next.js" },
-            { icon: "skill-icons:nodejs-dark", label: "Node.js" },
-            { icon: "skill-icons:tailwindcss-dark", label: "Tailwind" }
-          ].map((skill, index) => (
-            <motion.div
-              key={skill.label}
-              className="flex items-center gap-2 px-3 py-2 bg-gray-50/80 dark:bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-200/50 dark:border-gray-700/30"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.2 + index * 0.1 }}
-              whileHover={{ scale: 1.05, y: -2 }}
-            >
-              <Icon icon={skill.icon} width={16} height={16} />
-              <span className="text-sm text-gray-700 dark:text-gray-300">{skill.label}</span>
-            </motion.div>
-          ))}
-        </motion.div> */}
-
-        {/* Status */}
+        
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
