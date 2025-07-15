@@ -3,7 +3,6 @@
 import { Icon } from "@iconify/react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import SectionHeader from "./SectionHeader";
 
@@ -357,29 +356,7 @@ export default function CertificationsSection() {
                       </div>
                     </div>
 
-                    {/* Credential ID */}
-                    <div className="flex items-center justify-between pt-4 border-t border-gray-200/60 dark:border-gray-700/50">
-                      <Link
-                        href={`https://www.coursera.org/verify/${cert.credentialId}`}
-                        target="_blank"
-                      // rel="noopener noreferrer"
-                      >
-                        <div className="flex items-center gap-2">
-                          <Icon icon="solar:arrow-right-up-bold" className="text-green-500" width={14} height={14} />
-                          <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">
-                            ID: <span className="text-gray-700 dark:text-gray-300 font-mono">{cert.credentialId}</span>
-                          </span>
-                          <Icon icon="solar:link-bold" className="text-gray-500" width={14} height={14} />
-                        </div>
-                      </Link>
-                      <button
-                        className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 text-blue-700 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 rounded-lg border border-blue-200/60 dark:border-blue-700/50 hover:border-blue-300/80 dark:hover:border-blue-600/70 hover:from-blue-100 hover:to-blue-200 dark:hover:from-blue-800/30 dark:hover:to-blue-700/30 transition-all duration-300 text-xs font-medium shadow-sm hover:shadow-md"
-                        onClick={() => setSelectedCertificate(cert)}
-                      >
-                        <Icon icon="solar:eye-bold" width={12} height={12} />
-                        <span>View</span>
-                      </button>
-                    </div>
+                
                   </div>
                 </div>
               </motion.div>
