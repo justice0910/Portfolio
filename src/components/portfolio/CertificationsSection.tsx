@@ -1,189 +1,127 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
-import { useState } from "react";
+import { motion } from "framer-motion";
 import SectionHeader from "./SectionHeader";
 
-type Certificate = {
+type CredentialType = "Education" | "Certification" | "Achievement";
+
+type Credential = {
   title: string;
-  provider: string;
-  platform: string;
-  issued: string;
-  credentialId: string;
-  skills: string[];
-  providerIcon: string;
-  platformIcon: string;
+  institution: string;
+  type: CredentialType;
+  year: string;
+  description: string;
+  icon: string;
   color: string;
-  certificatePreview: string;
-  providerIconSize: number;
-  platformIconSize: number;
 };
 
-const certifications: Certificate[] = [
+const credentials: Credential[] = [
+  // Education
   {
-    title: "Git and GitHub Essentials",
-    provider: "IBM",
-    platform: "Coursera",
-    issued: "January 2023",
-    credentialId: "YYQL3U4QAZJF",
-    skills: ["Version Control", "Git", "GitHub", "GitLab", "Open Source"],
-    providerIcon: "lineicons:ibm",
-    platformIcon: "logos:coursera",
-    color: "from-blue-500 to-blue-600",
-    certificatePreview: "/certificates/ YYQL3U4QAZJF_GIT_GITHUB.png",
-    providerIconSize: 64,
-    platformIconSize: 88
+    title: "Doctor of Philosophy (PhD) in Computer Science",
+    institution: "University of Maryland",
+    type: "Education",
+    year: "2009 - 2013",
+    description: "Advanced research in machine learning, AI systems, and computer science theory",
+    icon: "solar:square-academic-cap-bold",
+    color: "from-blue-500 to-indigo-600"
   },
   {
-    title: "Web Development with HTML, CSS, JavaScript Essentials",
-    provider: "IBM",
-    platform: "Coursera",
-    issued: "January 2023",
-    credentialId: "3UPD6SABRD3B",
-    skills: ["IBM Cloud", "HTML", "CSS", "Full-Stack Development"],
-    providerIcon: "lineicons:ibm",
-    platformIcon: "logos:coursera",
-    color: "from-blue-500 to-blue-600",
-    certificatePreview: "/certificates/3UPD6SABRD3B_INTRO_WEB.png",
-    providerIconSize: 64,
-    platformIconSize: 88
+    title: "Master of Science in Computer Science",
+    institution: "University of Maryland",
+    type: "Education",
+    year: "2007 - 2009",
+    description: "Graduate studies in computer science with focus on ML and systems",
+    icon: "solar:diploma-bold",
+    color: "from-purple-500 to-pink-600"
   },
   {
-    title: "Introduction to Cloud Computing",
-    provider: "IBM",
-    platform: "Coursera",
-    issued: "January 2023",
-    credentialId: "verified-credly",
-    skills: ["Container", "IaaS", "IBM Cloud", "Architecture", "Cloud Computing", "PaaS", "DevOps"],
-    providerIcon: "lineicons:ibm",
-    platformIcon: "logos:coursera",
-    color: "from-blue-500 to-blue-600",
-    certificatePreview: "/certificates/EXFQ7QMJYUQQ_AWS.png",
-    providerIconSize: 64,
-    platformIconSize: 88
+    title: "Bachelor of Science in Computer Science",
+    institution: "University of Maryland",
+    type: "Education",
+    year: "2003 - 2007",
+    description: "Undergraduate degree in computer science fundamentals",
+    icon: "solar:diploma-bold",
+    color: "from-green-500 to-emerald-600"
   },
-
+  // Certifications
   {
-    title: "Introduction to Databases for Back-End Development",
-    provider: "Meta",
-    platform: "Coursera",
-    issued: "February 2023",
-    credentialId: "5FNQEGLH78UD",
-    skills: ["Database Design", "SQL", "Backend Development", "Data Management"],
-    providerIcon: "logos:meta-icon",
-    platformIcon: "logos:coursera",
-    color: "from-blue-500 to-purple-600",
-    certificatePreview: "/certificates/5FNQEGLH78UD_DATABASES_FOR_BACKEND.png",
-    providerIconSize: 64,
-    platformIconSize: 88
-  },
-
-  {
-    title: "Introduction to Back-End Development",
-    provider: "Meta",
-    platform: "Coursera",
-    issued: "January 2023",
-    credentialId: "2Y8NRQC5MP96",
-    skills: ["Backend Development", "APIs", "Server-Side Programming", "Web Development"],
-    providerIcon: "logos:meta-icon",
-    platformIcon: "logos:coursera",
-    color: "from-blue-500 to-purple-600",
-    certificatePreview: "/certificates/2Y8NRQC5MP96_INTRO_BE.png",
-    providerIconSize: 64,
-    platformIconSize: 88
+    title: "AI Infrastructure and Operations Fundamentals",
+    institution: "NVIDIA",
+    type: "Certification",
+    year: "2025",
+    description: "Comprehensive training on AI infrastructure, operations, and deployment best practices",
+    icon: "simple-icons:nvidia",
+    color: "from-green-500 to-green-700"
   },
   {
-    title: "Programming in Python",
-    provider: "Meta",
-    platform: "Coursera",
-    issued: "January 2023",
-    credentialId: "2AUUVS958L5Y",
-    skills: ["Python", "Programming", "Data Structures", "Algorithms"],
-    providerIcon: "logos:meta-icon",
-    platformIcon: "logos:coursera",
-    color: "from-blue-500 to-purple-600",
-    certificatePreview: "/certificates/2AUUVS958L5Y_PYTHON.png",
-    providerIconSize: 64,
-    platformIconSize: 88
-  },
-
-  {
-    title: "Version Control",
-    provider: "Meta",
-    platform: "Coursera",
-    issued: "January 2023",
-    credentialId: "BLGJKHN6UTSF",
-    skills: ["Git", "Version Control", "Collaboration", "Software Development"],
-    providerIcon: "logos:meta-icon",
-    platformIcon: "logos:coursera",
-    color: "from-blue-500 to-purple-600",
-    certificatePreview: "/certificates/BLGJKHN6UTSF_version_control.png",
-    providerIconSize: 64,
-    platformIconSize: 88
+    title: "Getting Started with Google BERT",
+    institution: "Educative",
+    type: "Certification",
+    year: "2025",
+    description: "Deep dive into BERT architecture, fine-tuning, and NLP applications",
+    icon: "simple-icons:educative",
+    color: "from-blue-400 to-blue-600"
   },
   {
-    title: "Introduction to Databases",
-    provider: "Meta",
-    platform: "Coursera",
-    issued: "February 2023",
-    credentialId: "N9LJFAWZXTMA",
-    skills: ["Database Fundamentals", "SQL", "Data Management", "Database Design"],
-    providerIcon: "logos:meta-icon",
-    platformIcon: "logos:coursera",
-    color: "from-blue-500 to-purple-600",
-    certificatePreview: "/certificates/N9LJFAWZXTMA_DATABASES.png",
-    providerIconSize: 64,
-    platformIconSize: 88
+    title: "Deep Learning with PyTorch Step-by-Step: Part I - Fundamentals",
+    institution: "Educative",
+    type: "Certification",
+    year: "2025",
+    description: "Comprehensive PyTorch training covering deep learning fundamentals and implementations",
+    icon: "logos:pytorch-icon",
+    color: "from-orange-500 to-red-600"
   },
   {
-    title: "AWS Cloud Technical Essentials",
-    provider: "Amazon Web Services",
-    platform: "Coursera",
-    issued: "February 2023",
-    credentialId: "EXFQ7QMJYUQQ",
-    skills: ["AWS", "Cloud Computing", "EC2", "S3", "IAM", "VPC"],
-    // providerIcon: "logos:aws",
-    providerIcon: "skill-icons:aws-dark",
-    platformIcon: "logos:coursera",
-    color: "from-orange-500 to-red-600 text-black dark:text",
-    certificatePreview: "/certificates/EXFQ7QMJYUQQ_AWS.png",
-    providerIconSize: 44,
-    platformIconSize: 88
+    title: "Grokking the Generative AI System Design",
+    institution: "Educative",
+    type: "Certification",
+    year: "2025",
+    description: "System design patterns for building production-grade generative AI applications",
+    icon: "solar:cpu-bolt-bold",
+    color: "from-violet-500 to-purple-700"
   },
   {
-    title: "Foundations: Data, Data, Everywhere",
-    provider: "Google",
-    platform: "Coursera",
-    issued: "November 2022",
-    credentialId: "6RUAYHXFV5XZ",
-    skills: ["Data Analysis", "Data Management", "Statistical Analysis"],
-    providerIcon: "logos:google",
-    platformIcon: "logos:coursera",
-    color: "from-indigo-500 to-purple-600",
-    certificatePreview: "/certificates/6RUAYHXFV5XZ_Foundations_data.png",
-    providerIconSize: 64,
-    platformIconSize: 88
+    title: "Machine Learning System Design",
+    institution: "Educative",
+    type: "Certification",
+    year: "2025",
+    description: "End-to-end ML system design including data pipelines, model serving, and MLOps",
+    icon: "solar:graph-up-bold",
+    color: "from-cyan-500 to-teal-600"
+  },
+  // Achievements
+  {
+    title: "MIT CSAIL Research",
+    institution: "MIT Computer Science and Artificial Intelligence Laboratory",
+    type: "Achievement",
+    year: "2010 - 2011",
+    description: "Advanced ML research implementing prototype systems with PhD researchers",
+    icon: "simple-icons:mit",
+    color: "from-red-500 to-red-600"
   },
   {
-    title: "Databases with SQL",
-    provider: "CS50",
-    platform: "HarvardX",
-    issued: "May 2025",
-    credentialId: "d7be6646-4c57-431e-88a9-ad7b882864e3",
-    skills: ["SQL", "Database", "Data Management", "Data Analysis"],
-    providerIcon: "fa-solid:university",
-    platformIcon: "simple-icons:edx",
-    color: "from-indigo-500 to-purple-600",
-    certificatePreview: "/certificates/CS50_SQL.png",
-    providerIconSize: 44,
-    platformIconSize: 44
+    title: "Large-Scale ML Systems at Meta",
+    institution: "Meta (Facebook)",
+    type: "Achievement",
+    year: "2016 - 2024",
+    description: "8+ years building ML ranking and recommendation systems serving billions",
+    icon: "logos:meta-icon",
+    color: "from-blue-500 to-blue-700"
+  },
+  {
+    title: "LLM Research Scientist",
+    institution: "Yahoo",
+    type: "Achievement",
+    year: "2025 - Present",
+    description: "Leading LLM-augmented search and RAG pipeline development",
+    icon: "logos:yahoo",
+    color: "from-purple-500 to-purple-700"
   }
 ];
 
 export default function CertificationsSection() {
-  const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -255,10 +193,10 @@ export default function CertificationsSection() {
 
         <div className="relative z-10">
           <SectionHeader
-            tagText="Professional Credentials"
+            tagText="Education & Certifications"
             tagIcon="solar:verified-check-bold"
-            heading="Certifications"
-            description="Professional certifications and credentials that validate my expertise in modern technologies and development practices."
+            heading="Credentials"
+            description="Academic background, professional certifications, and career achievements in AI/ML"
             showUnderline={false}
             centered={true}
           />
@@ -270,7 +208,7 @@ export default function CertificationsSection() {
             viewport={{ once: true }}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-4"
           >
-            {certifications.map((cert, index) => (
+            {credentials.map((cred, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
@@ -283,19 +221,23 @@ export default function CertificationsSection() {
               >
                 <div className="h-full bg-white/70 dark:bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-300 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-600 transition-all duration-300 overflow-hidden">
 
-                  {/* Header with gradient - keeping this as requested */}
-                  <div className={`h-20 flex items-center justify-between bg-slate-100 dark:bg-slate-900 px-4 ${cert.color} relative overflow-hidden`}>
-                    <div className="flex items-center justify-end mr-4 gap-1">
-                      <Icon icon={cert.providerIcon} className="" width={cert.providerIconSize} height={cert.providerIconSize} />
-                      <span className="text-black dark:text-white text-sm font-bold">×</span>
-                      <Icon icon={cert.platformIcon} className="" width={cert.platformIconSize} height={cert.platformIconSize} />
-                    </div>
-                    <div className="flex items-center justify-start gap-0">
-                      <div className="relative w-8 h-8 rounded-lg flex items-center justify-center">
-                        <div className="absolute top-1/5 left-1/4 w-1/2 h-1/2 bg-white rounded-lg -z-0"></div>
-                        <Icon icon="solar:verified-check-bold" className="text-blue-500 z-10" width={26} height={26} />
+                  {/* Header with gradient */}
+                  <div className={`h-20 flex items-center justify-between bg-gradient-to-r ${cred.color} px-6 relative overflow-hidden`}>
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                        <Icon icon={cred.icon} className="text-white" width={28} height={28} />
                       </div>
-                      <span className="text-blue-500 text-sm font-medium">Verified</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                        cred.type === 'Education' 
+                          ? 'bg-white/20 text-white' 
+                          : cred.type === 'Certification'
+                          ? 'bg-green-400/30 text-green-100'
+                          : 'bg-yellow-400/30 text-yellow-100'
+                      }`}>
+                        {cred.type}
+                      </span>
                     </div>
                   </div>
 
@@ -304,59 +246,27 @@ export default function CertificationsSection() {
                     <div className="absolute top-4 right-4 w-2 h-2 bg-blue-400/30 rounded-full animate-pulse"></div>
                     <div className="absolute top-6 right-8 w-1 h-1 bg-purple-400/40 rounded-full animate-pulse delay-500"></div>
 
-                    {/* Certificate Title */}
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4 leading-tight group-hover:text-gray-700 dark:group-hover:text-gray-100 transition-colors">
-                      {cert.title}
+                    {/* Title */}
+                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 leading-tight group-hover:text-gray-700 dark:group-hover:text-gray-100 transition-colors">
+                      {cred.title}
                     </h3>
 
-                    {/* Provider Info */}
-                    <div className="space-y-3 mb-6 bg-gray-50/50 dark:bg-gray-800/30 rounded-xl p-4 border border-gray-200/50 dark:border-gray-700/30">
-                      <div className="flex items-center gap-3 text-sm">
-                        <div className="w-5 h-5 bg-gradient-to-r from-blue-500 to-blue-600 rounded-md flex items-center justify-center">
-                          <Icon icon="solar:buildings-2-bold" className="text-white" width={12} height={12} />
-                        </div>
-                        <span className="text-gray-600 dark:text-gray-400 font-medium">Provider:</span>
-                        <span className="font-semibold text-gray-900 dark:text-white">{cert.provider}</span>
+                    {/* Institution & Year */}
+                    <div className="space-y-2 mb-4">
+                      <div className="flex items-center gap-2 text-sm">
+                        <Icon icon="solar:buildings-2-bold" className="text-blue-500" width={16} height={16} />
+                        <span className="font-semibold text-gray-700 dark:text-gray-300">{cred.institution}</span>
                       </div>
-                      <div className="flex items-center gap-3 text-sm">
-                        <div className="w-5 h-5 bg-gradient-to-r from-purple-500 to-purple-600 rounded-md flex items-center justify-center">
-                          <Icon icon="solar:monitor-smartphone-bold" className="text-white" width={12} height={12} />
-                        </div>
-                        <span className="text-gray-600 dark:text-gray-400 font-medium">Platform:</span>
-                        <span className="font-semibold text-blue-600 dark:text-blue-400">{cert.platform}</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-sm">
-                        <div className="w-5 h-5 bg-gradient-to-r from-green-500 to-green-600 rounded-md flex items-center justify-center">
-                          <Icon icon="solar:calendar-bold" className="text-white" width={12} height={12} />
-                        </div>
-                        <span className="text-gray-600 dark:text-gray-400 font-medium">Issued:</span>
-                        <span className="font-semibold text-gray-700 dark:text-gray-300">{cert.issued}</span>
+                      <div className="flex items-center gap-2 text-sm">
+                        <Icon icon="solar:calendar-bold" className="text-green-500" width={16} height={16} />
+                        <span className="text-gray-600 dark:text-gray-400">{cred.year}</span>
                       </div>
                     </div>
 
-                    {/* Skills */}
-                    <div className="mb-6">
-                      <div className="flex items-center gap-2 mb-3">
-                        <div className="w-4 h-4 bg-gradient-to-r from-amber-500 to-orange-500 rounded-md flex items-center justify-center">
-                          <Icon icon="solar:star-bold" className="text-white" width={10} height={10} />
-                        </div>
-                        <h4 className="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wide">
-                          Skills Validated
-                        </h4>
-                      </div>
-                      <div className="flex flex-wrap gap-2">
-                        {cert.skills.map((skill, skillIndex) => (
-                          <span
-                            key={skillIndex}
-                            className="px-3 py-1.5 bg-gradient-to-r from-gray-100 to-gray-200/80 dark:from-gray-700/50 dark:to-gray-800/50 text-gray-800 dark:text-gray-200 rounded-lg text-xs font-medium border border-gray-300/60 dark:border-gray-600/50 hover:from-blue-50 hover:to-blue-100 dark:hover:from-blue-900/20 dark:hover:to-blue-800/20 hover:border-blue-300/60 dark:hover:border-blue-600/50 hover:text-blue-800 dark:hover:text-blue-200 transition-all duration-300 cursor-default shadow-sm hover:shadow-md"
-                          >
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                
+                    {/* Description */}
+                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                      {cred.description}
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -373,111 +283,36 @@ export default function CertificationsSection() {
           >
             <motion.div
               whileHover={{ scale: 1.02, y: -2 }}
-              className="inline-flex items-center gap-6 px-8 py-4 bg-gradient-to-r from-blue-50/90 to-purple-50/90 dark:from-blue-900/30 dark:to-purple-900/30 backdrop-blur-sm border border-blue-200/50 dark:border-blue-800/50 hover:border-blue-300/70 dark:hover:border-blue-600/70 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500"
+              className="inline-flex flex-wrap justify-center items-center gap-4 md:gap-6 px-6 md:px-8 py-4 bg-gradient-to-r from-blue-50/90 to-purple-50/90 dark:from-blue-900/30 dark:to-purple-900/30 backdrop-blur-sm border border-blue-200/50 dark:border-blue-800/50 hover:border-blue-300/70 dark:hover:border-blue-600/70 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500"
             >
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl shadow-md">
-                  <Icon icon="solar:star-outline" className="text-white" width={18} height={18} />
+                  <Icon icon="solar:square-academic-cap-bold" className="text-white" width={18} height={18} />
                 </div>
                 <span className="text-blue-700 dark:text-blue-300 text-sm md:text-base font-semibold">
-                  11 Professional Certifications
+                  PhD in Computer Science
                 </span>
               </div>
-              <div className="w-px h-6 bg-gradient-to-b from-blue-300/50 via-purple-300/50 to-blue-300/50"></div>
+              <div className="hidden md:block w-px h-6 bg-gradient-to-b from-blue-300/50 via-purple-300/50 to-blue-300/50"></div>
               <div className="flex items-center gap-3">
-                <Icon icon="solar:verified-check-bold" className="text-blue-500" width={22} height={22} />
+                <div className="p-2 bg-gradient-to-r from-green-500 to-teal-600 rounded-xl shadow-md">
+                  <Icon icon="solar:verified-check-bold" className="text-white" width={18} height={18} />
+                </div>
+                <span className="text-green-700 dark:text-green-300 text-sm md:text-base font-semibold">
+                  5 AI/ML Certifications
+                </span>
+              </div>
+              <div className="hidden md:block w-px h-6 bg-gradient-to-b from-blue-300/50 via-purple-300/50 to-blue-300/50"></div>
+              <div className="flex items-center gap-3">
+                <Icon icon="solar:star-bold" className="text-yellow-500" width={22} height={22} />
                 <span className="text-gray-600 dark:text-gray-400 text-sm md:text-base font-medium">
-                  Verified by Industry Leaders
+                  16+ Years Experience
                 </span>
               </div>
             </motion.div>
           </motion.div>
         </div>
       </motion.section>
-
-      {/* Enhanced Certificate Preview Modal */}
-      <AnimatePresence>
-        {selectedCertificate && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-50 p-4"
-            onClick={() => setSelectedCertificate(null)}
-          >
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-              // transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="bg-gradient-to-br from-white/95 to-white/90 dark:from-gray-900/95 dark:to-gray-800/90 backdrop-blur-xl rounded-3xl shadow-2xl max-w-4xl max-h-[90vh] overflow-hidden relative border border-white/20 dark:border-gray-700/30"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* Modal Header */}
-              <div className="flex items-center justify-between p-6 border-b border-gray-200/50 dark:border-gray-700/50 backdrop-blur-sm">
-                <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1">
-                    {selectedCertificate.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base">
-                    {selectedCertificate.provider} • {selectedCertificate.issued}
-                  </p>
-                </div>
-                <motion.button
-                  whileHover={{ scale: 1.1, rotate: 90 }}
-                  whileTap={{ scale: 0.9 }}
-                  onClick={() => setSelectedCertificate(null)}
-                  className="p-3 hover:bg-gray-100/80 dark:hover:bg-gray-800/80 rounded-xl transition-all duration-300 border border-gray-200/50 dark:border-gray-700/50"
-                >
-                  <Icon icon="solar:close-outline" className="text-gray-500" width={20} height={20} />
-                </motion.button>
-              </div>
-
-              {/* Certificate Image */}
-              <div className="p-6 flex justify-center bg-gradient-to-br from-gray-50/50 to-white/50 dark:from-gray-800/50 dark:to-gray-900/50">
-                <div className="relative max-w-full max-h-[60vh] overflow-hidden  shadow-lg border border-gray-200/50 dark:border-gray-700/50">
-                  <Image
-                    src={selectedCertificate.certificatePreview || ""}
-                    alt={selectedCertificate.title}
-                    width={800}
-                    height={600}
-                    className="w-full h-auto"
-                    style={{ objectFit: 'contain' }}
-                  />
-                </div>
-              </div>
-
-              {/* Modal Footer */}
-              <div className="flex items-center justify-between p-6 border-t border-gray-200/50 dark:border-gray-700/50 backdrop-blur-sm">
-                <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
-                  Credential ID: <span className="text-gray-800 dark:text-gray-200">{selectedCertificate.credentialId}</span>
-                </div>
-                <div className="flex gap-3">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => setSelectedCertificate(null)}
-                    className="px-4 py-2 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white rounded-xl transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl border border-red-500/50"
-                  >
-                    <Icon icon="solar:close-circle-bold" className="text-white" width={20} height={20} />
-                    Close
-                  </motion.button>
-                  <motion.a
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    href={selectedCertificate.certificatePreview || ""}
-                    download={`${selectedCertificate.title}.png`}
-                    className="px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-xl transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl border border-blue-500/50"
-                  >
-                    <Icon icon="solar:download-bold" width={16} height={16} />
-                    Download
-                  </motion.a>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </>
   );
-} 
+}

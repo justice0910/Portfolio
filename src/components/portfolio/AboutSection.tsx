@@ -15,20 +15,21 @@ export default function AboutSection() {
       <h2 className="text-2xl font-bold mb-6">About</h2>
       <div className="max-w-none">
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Hello, World! I am Anton Ryschchuck — a passionate Full Stack Developer, blockchain devleloper & UI/UX enthusiast
-          dedicated to creating high-performance, user-centric software solutions with intuitive and engaging designs.
+          Hello, World! I am Michael Chen — a Senior AI/ML and Full-Stack Engineer
+          with 16+ years of experience designing and delivering large-scale machine learning platforms,
+          LLM-powered search systems, and recommendation infrastructures at Meta and Yahoo.
         </p>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          With 8+ years of experience, I specialize in building scalable web and mobile applications using
-          React, Next.js, TypeScript, and modern development technologies. I thrive on turning complex problems
-          into elegant solutions that users love.
+          I specialize in architecting end-to-end AI solutions, including data pipelines, model training,
+          inference services, and product-grade APIs for Ads, Search, and Recommendation systems serving
+          hundreds of millions of users.
         </p>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-          Beyond work, I love exploring emerging technologies, contributing to open-source projects, and
-          mentoring aspiring developers. I believe in continuous learning and staying at the forefront of
-          technological innovation.
+          I hold a PhD in Computer Science from the University of Maryland and am passionate about
+          deploying RAG pipelines, transformer-based NLP models, real-time inference platforms, and
+          scalable MLOps workflows with a strong focus on performance, reliability, and cost efficiency.
         </p>
       </div>
     </motion.section>
   );
-} 
+}

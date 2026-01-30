@@ -83,7 +83,7 @@ export default function OverviewSection() {
           tagText="Get To Know Me"
           tagIcon="solar:user-heart-bold"
           heading="About Me"
-          description="Crafting digital experiences with passion, precision, and purpose"
+          description="Building intelligent systems that scale to hundreds of millions of users"
           showUnderline={true}
           centered={true}
         />
@@ -109,26 +109,27 @@ export default function OverviewSection() {
                   <div>
                     <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-gray-900 dark:text-white flex items-center gap-2 md:gap-3">
                       <span className="text-2xl sm:text-3xl md:text-4xl">👋</span>
-                      Hello, I&apos;m Anton Ryschchuk
+                      Hello, I&apos;m Michael Chen
                     </h3>
                     <p className="text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-4 md:mb-6">
-                      A passionate <span className="font-bold text-blue-600 dark:text-blue-400">Full Stack</span> and
+                      A Senior <span className="font-bold text-blue-600 dark:text-blue-400">AI/ML Engineer</span> and
                       <span className="font-bold text-purple-600 dark:text-purple-400">
-                        &nbsp; Blockchain</span> developer with
-                      <span className="font-bold text-green-600 dark:text-green-400"> 8+ years</span> of experience crafting
-                      digital experiences that users love.
+                        &nbsp;Full-Stack Engineer</span> with
+                      <span className="font-bold text-green-600 dark:text-green-400"> 16+ years</span> of experience 
+                      designing and delivering large-scale machine learning platforms at Meta and Yahoo.
                     </p>
                   </div>
 
                   {/* Expanded About Content */}
                   <div className="space-y-3 md:space-y-4 border-t border-gray-200/50 dark:border-gray-700/50 pt-4 md:pt-6">
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-                    I specialize in crafting scalable, secure, and high-performance web and blockchain solutions.
+                      I specialize in architecting end-to-end AI solutions, including LLM-powered search systems, 
+                      RAG pipelines, transformer-based NLP models, real-time inference platforms, and scalable MLOps 
+                      workflows for Ads, Search, and Recommendation systems serving hundreds of millions of users.
                     </p>
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-                      Beyond work, I love exploring emerging technologies, contributing to open-source projects, and
-                      mentoring aspiring developers. I believe in continuous learning and staying at the forefront of
-                      technological innovation.
+                      I&apos;m passionate about productionizing research models while ensuring security, compliance, 
+                      and operational excellence. I hold a PhD in Computer Science from the University of Maryland.
                     </p>
                   </div>
 
@@ -139,7 +140,7 @@ export default function OverviewSection() {
                       Core Technologies
                     </h4>
                     <div className="flex flex-wrap gap-2 md:gap-3">
-                      {["Solidity", "Go", "Rust", "React", "Next.js", "TypeScript", "Node.js", "Python", "AWS", "AI Integration"].map((skill, index) => (
+                      {["PyTorch", "TensorFlow", "LangChain", "Hugging Face", "React", "TypeScript", "Python", "Go", "Kubernetes", "AWS/GCP"].map((skill, index) => (
                         <motion.span
                           key={skill}
                           initial={{ opacity: 0, scale: 0 }}
@@ -170,9 +171,9 @@ export default function OverviewSection() {
               </h4>
               <div className="space-y-4">
                 {[
-                  { icon: "solar:star-bold", text: "Expert in Blockchain Development", color: "text-yellow-600" },
-                  { icon: "solar:cpu-bolt-bold-duotone", text: "Expert in Full Stack Development", color: "text-blue-600" },
-                  { icon: "solar:code-square-bold", text: "50+ Projects Delivered", color: "text-green-600" },
+                  { icon: "solar:star-bold", text: "PhD in Computer Science", color: "text-yellow-600" },
+                  { icon: "solar:cpu-bolt-bold-duotone", text: "Meta & Yahoo Experience", color: "text-blue-600" },
+                  { icon: "solar:code-square-bold", text: "100M+ Users Served", color: "text-green-600" },
                 ].map((achievement, index) => (
                   <motion.div
                     key={index}
@@ -188,11 +189,11 @@ export default function OverviewSection() {
               </div>
             </div>
 
-            {/* Available for Hire */}
+            {/* Education */}
             <div className="p-6 rounded-2xl bg-gradient-to-br from-emerald-50/90 to-cyan-50/90 dark:from-emerald-950/30 dark:to-cyan-950/30 backdrop-blur-sm border border-white/30 dark:border-gray-700/40 shadow-xl">
               <h4 className="font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-                <Icon icon="solar:rocket-bold" className="text-emerald-600 w-5 h-5" width={20} height={20} />
-                Available for Hire
+                <Icon icon="solar:square-academic-cap-bold" className="text-emerald-600 w-5 h-5" width={20} height={20} />
+                Education
               </h4>
               <div className="space-y-3.5">
                 <motion.div
@@ -201,8 +202,8 @@ export default function OverviewSection() {
                   transition={{ delay: 2.0 }}
                   className="flex items-center gap-3 p-3 rounded-lg bg-green-100/70 dark:bg-gray-800/30  transition-all duration-300 group border border-white/20 dark:border-gray-700/30"
                 >
-                  <Icon icon="solar:check-circle-bold" className="text-green-600 w-5 h-5" width={20} height={20} />
-                  <span className="text-sm font-medium text-gray-800 dark:text-gray-300">Open to New Opportunities</span>
+                  <Icon icon="solar:diploma-bold" className="text-green-600 w-5 h-5" width={20} height={20} />
+                  <span className="text-sm font-medium text-gray-800 dark:text-gray-300">PhD, Computer Science</span>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -210,8 +211,8 @@ export default function OverviewSection() {
                   transition={{ delay: 2.2 }}
                   className="flex items-center gap-3 p-3 rounded-lg bg-green-100/70 dark:bg-gray-800/30  transition-all duration-300 group border border-white/20 dark:border-gray-700/30"
                 >
-                  <Icon icon="solar:planet-2-bold" className="text-cyan-600 w-5 h-5" width={20} height={20} />
-                  <span className="text-sm font-medium text-gray-800 dark:text-gray-300">Open to Relocation</span>
+                  <Icon icon="solar:diploma-bold" className="text-cyan-600 w-5 h-5" width={20} height={20} />
+                  <span className="text-sm font-medium text-gray-800 dark:text-gray-300">MS, Computer Science</span>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -219,8 +220,8 @@ export default function OverviewSection() {
                   transition={{ delay: 2.4 }}
                   className="flex items-center gap-3 p-3 rounded-lg bg-green-100/70 dark:bg-gray-800/30  transition-all duration-300 group border border-white/20 dark:border-gray-700/30"
                 >
-                  <Icon icon="solar:clock-circle-bold" className="text-blue-600 w-5 h-5" width={20} height={20} />
-                  <span className="text-sm font-medium text-gray-800 dark:text-gray-300">Remote & On-site Available</span>
+                  <Icon icon="solar:buildings-2-bold" className="text-blue-600 w-5 h-5" width={20} height={20} />
+                  <span className="text-sm font-medium text-gray-800 dark:text-gray-300">University of Maryland</span>
                 </motion.div>
               </div>
             </div>
@@ -229,4 +230,4 @@ export default function OverviewSection() {
       </motion.div>
     </motion.section>
   );
-} 
+}

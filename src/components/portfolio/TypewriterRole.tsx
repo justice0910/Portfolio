@@ -9,9 +9,10 @@ export default function TypewriterRole() {
   const [isDeleting, setIsDeleting] = useState(false);
 
   const roles = [
-    "Full Stack Developer",
-    "Software Engineer",
-    "Blockchain Specialist"
+    "AI/ML Engineer",
+    "Full Stack Engineer",
+    "LLM & MLOps Expert",
+    "Research Scientist"
   ];
 
   // Typewriter effect
@@ -159,4 +160,4 @@ export default function TypewriterRole() {
       </motion.div>
     </motion.div>
   );
-} 
+}

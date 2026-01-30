@@ -29,41 +29,41 @@ interface FeaturedTestimonialProps {
 
 const testimonials = [
   {
-    content: "Anton is great! He is very skillful and fast learner, just what you need in a developer.",
-    author: "David Hallett",
-    role: "CEO",
-    company: "BrewLabs",
+    content: "Michael's expertise in building large-scale ML systems is exceptional. His work on our recommendation platform significantly improved user engagement metrics across the board.",
+    author: "Sarah Johnson",
+    role: "Engineering Director",
+    company: "Meta",
     rating: 5,
-    project: "DeFi and Web3 utility platform",
-    avatar: "DH",
+    project: "ML Ranking Systems",
+    avatar: "SJ",
     featured: true
   },
   {
-    content: "Anton produced some really amazing work on the blockchain development.",
-    author: "Josh Fabian",
-    role: "CEO",
-    company: "Metagaming Inc",
+    content: "Michael led the development of our LLM-powered search system with remarkable efficiency. His deep understanding of both ML and production systems is rare.",
+    author: "Yi Fan",
+    role: "VP of Engineering",
+    company: "Yahoo",
     rating: 5,
-    project: "Blockchain Development",
-    avatar: "JF"
+    project: "LLM Search Systems",
+    avatar: "DP"
   },
   {
-    content: "Working with him was a game-changer for our business! His expertise in front-end development transformed our website into a sleek, user-friendly masterpiece. The attention to detail, responsiveness, and creative solutions he provided exceeded our expectations.",
-    author: "Danil Tumanov",
-    role: "Project Manger",
-    company: "Creatio",
+    content: "Working with Michael on our inference infrastructure was transformative. He reduced latency by 35% while maintaining reliability at scale.",
+    author: "Jamal Martin",
+    role: "Staff Engineer",
+    company: "Meta",
     rating: 5,
-    project: "Full Stack Development",
-    avatar: "DT"
+    project: "MLOps Infrastructure",
+    avatar: "JL"
   },
   {
-    content: "We had a fantastic experience working with him on a recent project. He consistently delivered high-quality work, showed exceptional attention to detail, and communicated effectively throughout the process.",
-    author: "Oleksii Abraimov",
-    role: "Project Manger ",
-    company: "Novatek",
+    content: "Michael's ability to bridge research and production is outstanding. He turned our experimental models into production-ready systems serving millions.",
+    author: "Januard Soterana",
+    role: "Research Scientist",
+    company: "Yahoo",
     rating: 5,
-    project: "Full Stack Development",
-    avatar: "OA"
+    project: "RAG Pipeline Development",
+    avatar: "RK"
   },
 
 ];
@@ -274,10 +274,10 @@ export default function TestimonialsSection() {
       <div className="relative z-10">
         {/* Header */}
         <SectionHeader
-          tagText="Client Stories"
+          tagText="Professional References"
           tagIcon="solar:users-group-rounded-outline"
-          heading="Testimonials Wall"
-          description="Real feedback from real clients who trusted me with their projects"
+          heading="Testimonials"
+          description="Feedback from colleagues and leaders I've worked with"
           showUnderline={false}
           centered={true}
         />
@@ -291,10 +291,10 @@ export default function TestimonialsSection() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-              Client Testimonials
+              Colleague Testimonials
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Honest feedback from clients I&apos;ve had the pleasure to work with
+              Feedback from professionals I&apos;ve collaborated with at Meta and Yahoo
             </p>
           </div>
 
@@ -315,4 +315,4 @@ export default function TestimonialsSection() {
       </div>
     </motion.section>
   );
-} 
+}

@@ -7,13 +7,13 @@ import "./globals.css";
 const inter = Space_Grotesk({ subsets: ["latin"], weight: ["500", "600", "700"] });
 
 export const metadata: Metadata = {
-  title: "Anton Ryschchuck - Full Stack Developer",
-  description: "Portfolio of Anton Ryschchuck, a passionate full-stack developer specializing in modern web technologies, React, Next.js, and innovative digital solutions.",
-  keywords: "Anton Ryschchuck, Full Stack Developer, React, Next.js, Web Development, Portfolio",
-  authors: [{ name: "Anton Ryschchuck" }],
+  title: "Michael Chen - AI/ML & Full Stack Engineer",
+  description: "Portfolio of Michael Chen, a Senior AI/ML and Full-Stack Engineer with 16+ years of experience designing large-scale ML platforms, LLM-powered systems, and production-grade AI solutions at Meta and Yahoo.",
+  keywords: "Michael Chen, AI/ML Engineer, Full Stack Developer, Machine Learning, LLM, PyTorch, TensorFlow, React, Meta, Yahoo, MLOps",
+  authors: [{ name: "Michael Chen" }],
   openGraph: {
-    title: "Anton Ryschchuck - Full Stack Developer",
-    description: "Portfolio of Anton Ryschchuck, passionate about building scalable, secure, and high-performance web and blockchain solutions",
+    title: "Michael Chen - AI/ML & Full Stack Engineer",
+    description: "Senior AI/ML and Full-Stack Engineer with 16+ years building large-scale ML systems at Meta and Yahoo, serving hundreds of millions of users.",
     type: "website",
   },
 };

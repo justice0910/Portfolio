@@ -7,62 +7,160 @@ import SectionHeader from "./SectionHeader";
 
 const projects = [
   {
-    title: "Brewlabs",
-    subtitle: "DeFi and Web3 Utility Platform",
-    description: "Brewlabs is a cryptocurrency project focused on empowering token launches and DeFi solutions through tools like BrewSwap (a decentralized exchange), cross-chain bridges, staking platforms, airdrop tools, and a bot marketplace",
+    title: "LLM-Augmented Search & Knowledge Platform",
+    subtitle: "Production-Grade Conversational QA System",
+    description: "Designed and deployed a production-grade LLM-powered search and conversational QA system using PyTorch, Hugging Face Transformers, LangChain, and RAG pipelines. Combined BM25 hybrid retrieval, transformer re-ranking, and context grounding to reduce hallucinations and improve semantic relevance.",
     features: [
-      "Decentralized exchange for seamless token swapping with low fees and cross-chain compatibility.",
-      "Staking contracts and liquidity pools to incentivize user participation and reward BREW token holders.",
-      "Automated airdrop distribution system to support token launches and community engagement.",
-      "Internal audits and collaborated with CertiK to identify and resolve vulnerabilities, ensuring robust security.",
+      "RAG pipelines backed by FAISS, Milvus, Weaviate, and Pinecone for vector search",
+      "BM25 hybrid retrieval with transformer re-ranking for optimal relevance",
+      "Context grounding to reduce hallucinations by 30%",
+      "Semantic relevance improvement with NDCG +14%",
     ],
     deliverables: [
-      "Secure, audited smart contracts for the BREW token and associated DeFi tools.",
-      "Fully functional BrewSwap DEX with a user-friendly interface and cross-chain support.",
-      "Staking and yield farming protocols",
-      "Interoperability between Binance Smart Chain, Polygon, and Ethereum.",
-      "Airdrop tool to streamline token distribution for partner projects, reducing manual overhead.",
-      "Technical documentation and user guides for DeFi tools, hosted on Gitbook",
+      "Python/FastAPI and Node.js backend services",
+      "React + Redux / Angular frontend interfaces",
+      "Kubernetes deployment serving millions of queries",
+      "Sub-150ms P99 latency at production scale",
     ],
-    tech: ["Solidity", "Truffle", "Tailwind CSS", "Web3.js", "Node.js", "Next.js"],
-    github: "https://github.com",
-    live: "https://brewlabs.info",
+    tech: ["PyTorch", "LangChain", "Hugging Face", "FAISS", "Milvus", "FastAPI", "React", "Kubernetes"],
+    github: "#",
+    live: "#",
     gradient: "from-blue-500 to-cyan-500",
     status: "Live",
-    category: "Blockchain Application",
+    category: "AI/ML Platform",
     highlight: "Featured",
-    timeline: "20 months",
-    clientType: "Cryptocurrency enthusiasts"
+    timeline: "Ongoing",
+    clientType: "Yahoo Search"
   },
   {
-    title: "Ender Protocol",
-    subtitle: "Decentralized Liquid Staking and Metaverse Integration",
-    description: "a liquid staking protocol leveraging Ethereum’s blockchain to enable concentrated yield tokens and liquid staking power through innovative LST-bond mechanisms.",
+    title: "Large-Scale Recommendation & Ranking Systems",
+    subtitle: "Personalized ML at Billions Scale",
+    description: "Architected recommender and ranking systems using deep learning (DNNs, Transformers), NLP models, and GenAI-assisted feature enrichment. Implemented real-time user behavior ingestion with event-driven pipelines achieving significant CTR improvements.",
     features: [
-      "Bond-based yield compression mechanism enabling users to stake ETH for endETH and earn $END tokens",
-      "Infrastructure for Metaverse Bonds, connecting staking rewards to in-game assets and economies in Endworld",
-      "Whitelist NFT minting process on Zora for closed beta access",
-      "Integration Layer-2 solutions and cross-chain bridges to optimize transaction costs and scalability",
-      "APIs and smart contracts to support in-game transactions.",
-      "Design of real-time leaderboards and community dashboards for user engagement",
+      "Deep learning models (DNNs, Transformers) for ranking optimization",
+      "GenAI-assisted feature enrichment for improved personalization",
+      "Real-time user behavior ingestion via Kafka-based event pipelines",
+      "A/B testing framework for large-scale experiments",
     ],
     deliverables: [
-      "Authored and audited Solidity smart contracts for liquid staking, bond NFTs, and $END token emissions.",
-      "Fully functional dApp with a responsive front-end",
-      "Multi-language translation engine",
-      "RESTful APIs for seamless data flow between the blockchain, front-end, and external services",
-      "Technical documentation on GitBook",
-      "Backend services and smart contract hooks for metaverse features",
+      "Go and Python microservices with RESTful APIs and GraphQL",
+      "Feature storage in PostgreSQL, MongoDB, Redis, and vector databases",
+      "8-12% CTR lift in production A/B tests",
+      "21% efficiency gains in large-scale simulations",
     ],
-    tech: ["React.js", "Typescript", "TailwindCSS", "Web3.js", "Ether.js", "Express", "Node.js", "Solidity", "Truffle", "Rest APIs", "AWS"],
-    github: "https://github.com",
-    live: "https://enderprotocol.io",
+    tech: ["PyTorch", "TensorFlow", "Go", "Python", "Kafka", "GraphQL", "PostgreSQL", "Redis"],
+    github: "#",
+    live: "#",
     gradient: "from-purple-500 to-pink-500",
     status: "Live",
-    category: "Blockchain development",
+    category: "ML Infrastructure",
     highlight: "Featured",
-    timeline: "15 months",
-    clientType: "=Crypto traders, stakers, developers, and gamers"
+    timeline: "8 years",
+    clientType: "Meta Ads & Feed"
+  },
+  {
+    title: "Real-Time ML Inference & MLOps Platform",
+    subtitle: "GPU-Optimized Model Serving Infrastructure",
+    description: "Developed GPU-optimized inference services supporting high-throughput model serving with strict latency SLAs. Implemented comprehensive MLOps infrastructure with CI/CD, monitoring, and cost-aware autoscaling.",
+    features: [
+      "GPU-optimized serving with Triton Inference Server and ONNX Runtime",
+      "Support for 20K+ QPS with strict P99 latency guarantees",
+      "Automated CI/CD pipelines with GitHub Actions",
+      "Cost-aware autoscaling reducing inference costs by 25%",
+    ],
+    deliverables: [
+      "Kubernetes and Helm-based deployment infrastructure",
+      "Prometheus and Grafana monitoring dashboards",
+      "ELK Stack logging and observability",
+      "AWS Bedrock integration for managed inference",
+    ],
+    tech: ["Kubernetes", "Triton", "ONNX", "GitHub Actions", "Prometheus", "Grafana", "AWS", "Helm"],
+    github: "#",
+    live: "#",
+    gradient: "from-green-500 to-emerald-500",
+    status: "Live",
+    category: "MLOps Platform",
+    highlight: "Infrastructure",
+    timeline: "Ongoing",
+    clientType: "Enterprise ML"
+  },
+  {
+    title: "Computer Vision Content Intelligence",
+    subtitle: "Image Classification & Quality Detection",
+    description: "Built computer vision systems using PyTorch, TensorFlow, OpenCV, and transformer-based vision models for image classification, quality detection, smart cropping, and content moderation across large datasets.",
+    features: [
+      "CNN and transformer-based vision models for classification",
+      "Smart image cropping and quality detection pipelines",
+      "Real-time content moderation systems",
+      "Integration with ML pipelines and Dockerized microservices",
+    ],
+    deliverables: [
+      "50% reduction in classification and data quality errors",
+      "AWS SageMaker deployment for scalable inference",
+      "Production-ready Dockerized microservices",
+      "Real-time moderation for user-generated content",
+    ],
+    tech: ["PyTorch", "TensorFlow", "OpenCV", "CNNs", "Transformers", "SageMaker", "Docker"],
+    github: "#",
+    live: "#",
+    gradient: "from-orange-500 to-red-500",
+    status: "Live",
+    category: "Computer Vision",
+    highlight: "Production",
+    timeline: "3 years",
+    clientType: "Content Platforms"
+  },
+  {
+    title: "Event-Driven Microservices & Data Platform",
+    subtitle: "High-Throughput Distributed Architecture",
+    description: "Designed a high-throughput event-driven architecture using Go (concurrency-optimized services), Kafka consumers/producers, and distributed data stores. Built for fault tolerance, schema evolution, and backpressure handling at scale.",
+    features: [
+      "Go-based concurrency-optimized microservices",
+      "Kafka consumers/producers for event streaming",
+      "Fault tolerance with automatic failover and recovery",
+      "Schema evolution and backpressure handling at scale",
+    ],
+    deliverables: [
+      "Processing 2M+ events/day with 99.99% availability",
+      "MongoDB and PostgreSQL integration with REST APIs",
+      "Kubernetes deployment with Helm charts",
+      "Comprehensive monitoring and alerting infrastructure",
+    ],
+    tech: ["Go", "Kafka", "MongoDB", "PostgreSQL", "Kubernetes", "Helm", "REST APIs", "Docker"],
+    github: "#",
+    live: "#",
+    gradient: "from-indigo-500 to-violet-500",
+    status: "Live",
+    category: "Data Platform",
+    highlight: "Scale",
+    timeline: "4 years",
+    clientType: "Enterprise Data"
+  },
+  {
+    title: "ML Experimentation & Analytics Framework",
+    subtitle: "End-to-End Pipeline Orchestration",
+    description: "Built scalable ML pipelines using Airflow, Spark, BigQuery, and Snowflake supporting training, evaluation, and deployment of NLP, CV, and ranking models. Designed A/B experimentation frameworks with automated rollout gates used across hundreds of millions of users.",
+    features: [
+      "Airflow and Spark-based pipeline orchestration",
+      "BigQuery and Snowflake integration for analytics",
+      "A/B experimentation with automated rollout gates",
+      "Automatic rollback mechanisms for safe deployments",
+    ],
+    deliverables: [
+      "40% improvement in model iteration velocity",
+      "Experimentation framework for 100M+ users",
+      "Unified training and evaluation infrastructure",
+      "Real-time experiment monitoring dashboards",
+    ],
+    tech: ["Airflow", "Spark", "BigQuery", "Snowflake", "Python", "A/B Testing", "MLflow", "Prometheus"],
+    github: "#",
+    live: "#",
+    gradient: "from-teal-500 to-cyan-500",
+    status: "Live",
+    category: "ML Platform",
+    highlight: "Analytics",
+    timeline: "5 years",
+    clientType: "Meta ML Platform"
   }
 ];
 
@@ -142,10 +240,10 @@ export default function ProjectsSection() {
       >
         {/* Section Header */}
         <SectionHeader
-          tagText="Portfolio Showcase"
+          tagText="Key Projects & Achievements"
           tagIcon="solar:code-square-bold"
           heading="Featured Projects"
-          description="Discover my latest work in web development, Blockchain development, and digital innovation"
+          description="Large-scale AI/ML systems powering products used by hundreds of millions"
           showUnderline={true}
           centered={true}
         />
@@ -172,17 +270,14 @@ export default function ProjectsSection() {
                   {/* Floating tech icons - hidden on mobile */}
                   <div className="hidden md:block absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500">
                     {[
-                      { icon: "logos:react", pos: { top: "15%", left: "80%" } },
-                      { icon: "logos:nextjs-icon", pos: { top: "60%", right: "4%" } },
-                      { icon: "logos:typescript-icon", pos: { bottom: "20%", left: "75%" } },
-                      { icon: "logos:nodejs-icon", pos: { top: "25%", right: "15%" } },
-                      { icon: "logos:tailwindcss-icon", pos: { bottom: "30%", left: "85%" } },
-                      { icon: "logos:postgresql", pos: { top: "40%", right: "20%" } },
-                      { icon: "simple-icons:langchain", pos: { bottom: "10%", left: "70%" } },
-                      { icon: "logos:redis", pos: { top: "20%", right: "25%" } },
-                      { icon: "logos:socket-io", pos: { bottom: "25%", left: "90%" } },
-                      { icon: "logos:stripe", pos: { top: "30%", right: "30%" } },
-                      { icon: "logos:vercel-icon", pos: { bottom: "15%", left: "65%" } },
+                      { icon: "logos:pytorch-icon", pos: { top: "15%", left: "80%" } },
+                      { icon: "logos:tensorflow", pos: { top: "60%", right: "4%" } },
+                      { icon: "simple-icons:langchain", pos: { bottom: "20%", left: "75%" } },
+                      { icon: "logos:kubernetes", pos: { top: "25%", right: "15%" } },
+                      { icon: "logos:aws", pos: { bottom: "30%", left: "85%" } },
+                      { icon: "logos:python", pos: { top: "40%", right: "20%" } },
+                      { icon: "logos:go", pos: { bottom: "10%", left: "70%" } },
+                      { icon: "logos:docker-icon", pos: { top: "20%", right: "25%" } },
                     ].map((item, i) => (
                       <motion.div
                         key={i}
@@ -257,23 +352,12 @@ export default function ProjectsSection() {
                       </p>
                     </div>
 
-                    {/* Action Buttons */}
+                    {/* Action Buttons - Hidden for internal projects */}
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
-                      <Link
-                        href={project.github}
-                        className="flex items-center justify-center gap-2 md:gap-3 px-4 py-2.5 md:px-6 md:py-3 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-lg md:rounded-xl hover:bg-white/30 transition-all duration-300 text-sm font-medium shadow-lg hover:shadow-xl active:scale-95"
-                      >
-                        <Icon icon="solar:code-bold" width={18} height={18} className="md:w-5 md:h-5" />
-                        <span>View Repository</span>
-                      </Link>
-
-                      <Link
-                        href={project.live}
-                        className="flex items-center justify-center gap-2 md:gap-3 px-4 py-2.5 md:px-6 md:py-3 bg-white text-gray-900 rounded-lg md:rounded-xl hover:bg-gray-100 transition-all duration-300 text-sm font-medium shadow-lg hover:shadow-xl active:scale-95"
-                      >
-                        <Icon icon="solar:arrow-up-outline" width={18} height={18} className="md:w-5 md:h-5" />
-                        <span>Live Demo</span>
-                      </Link>
+                      <div className="inline-flex items-center gap-2 md:gap-3 px-4 py-2.5 md:px-6 md:py-3 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-lg md:rounded-xl text-sm font-medium">
+                        <Icon icon="solar:lock-bold" width={18} height={18} className="md:w-5 md:h-5" />
+                        <span>Internal Project</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -315,7 +399,7 @@ export default function ProjectsSection() {
                         <div className="p-1.5 md:p-2 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg md:rounded-xl">
                           <Icon icon="solar:delivery-bold" className="text-white w-[18px] h-[18px] md:w-6 md:h-6" />
                         </div>
-                        <span>Deliverables</span>
+                        <span>Impact & Deliverables</span>
                       </h4>
                       <ul className="space-y-2.5 md:space-y-3">
                         {project.deliverables.map((deliverable, deliverableIndex) => (
@@ -382,7 +466,7 @@ export default function ProjectsSection() {
             >
               <Icon icon="solar:programming-bold" className="text-blue-500 dark:text-purple-400 w-5 h-5 md:w-6 md:h-6" />
               <span className="text-gray-700 dark:text-gray-300 font-medium text-sm md:text-base text-center">
-                Interested in working together? Let&apos;s create something amazing!
+                Interested in learning more? Let&apos;s connect!
               </span>
             </motion.div>
           </Link>
@@ -390,4 +474,4 @@ export default function ProjectsSection() {
       </motion.div>
     </motion.section>
   );
-} 
+}

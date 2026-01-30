@@ -6,64 +6,71 @@ import SectionHeader from "./SectionHeader";
 
 const experience = [
   {
-    role: "Senior Full Stack Developer",
-    company: "Remote Bob, London",
-    period: "December 2023 — November 2024",
-    type: "Remote",
-    companyIcon: "ic:baseline-person",
-    companyColor: "from-green-500 to-yellow-600",
-    description: "Implemented a sophisticated, high-performance company management system optimized for business efficiency and operational excellence.",
-    achievements: [
-      "Cut task allocation and scheduling time by 30%",
-      "Revamped interface achieved 95% user satisfaction, enhancing system usability for employees and admins",
-      "Cloud migration supported 50% more users without performance issues, accommodating workforce growth",
-      "Real-time dashboards reduced decision-making time by 40% for resource and invoicing tasks"
-    ],
-    technologies: ["JavaScript", "Python", "Node.js", "AWS", "GCP", "OpenAI API", "LangChain"]
-  },
-  {
-    role: "Senior Full Stack Developer",
-    company: "Creatio, Kyiv",
-    period: "May 2021 — November 2023",
+    role: "Research Scientist (LLM & Search Systems)",
+    company: "Yahoo, San Jose, CA",
+    period: "June 2025 — Present",
     type: "Full-time",
-    companyColor: "from-blue-500 to-red-600",
-    companyIcon: "simple-icons:creativetechnology",
-    description: "Participated in Creatio Academic website dev.",
+    companyIcon: "logos:yahoo",
+    companyColor: "from-purple-500 to-purple-700",
+    description: "Building LLM-augmented search and question-answering systems for Yahoo Search and content platforms.",
     achievements: [
-      "Developed a dynamic user interface using JavaScript and React.js framework.",
-      "Implemented a backend system to manage educational content, such as tutorials, videos, and certification modules.",
-      "Developed advanced search and filtering functionalities to help users quickly locate relevant courses, documentation, or webinars."
+      "Built LLM-augmented search using PyTorch, Hugging Face, LangChain, Milvus/FAISS, improving semantic relevance (NDCG +14%)",
+      "Designed RAG pipelines with vector search and transformer re-ranking, reducing hallucination by 30% and latency by 35%",
+      "Developed GPU-optimized inference services with Kubernetes and Triton, supporting 20K+ QPS with P99 < 120ms",
+      "Implemented LLM evaluation and A/B experimentation frameworks using BigQuery and Prometheus",
+      "Orchestrated ML pipelines using AWS SageMaker and Bedrock, improving content detection accuracy by 15%"
     ],
-    technologies: ["React", "PHP", "Bootstrapt", "jQuery", "AWS"]
+    technologies: ["PyTorch", "LangChain", "Hugging Face", "FAISS", "Milvus", "FastAPI", "Kubernetes", "AWS"]
   },
   {
-    role: "Blockchain Developer",
-    company: "Contractor",
-    period: "May 2020 — November 2024",
-    type: "Part-time",
-    companyColor: "from-blue-500 to-brown-600",
-    description: "Participated in blockchain developments as a contractor.",
-    achievements: [
-      "Designed and implemented smart contracts using Solidity for Ethereum-based decentralized applications.",
-      "Collaborated with cross-functional teams to integrate blockchain solutions with front-end interfaces using Web3.js.",
-      "Conducted rigorous testing and auditing of smart contracts using Truffle and Hardhat.",
-      "Developed a blockchain-based gaming platform using Ethereum and Polygon."
-    ],
-    technologies: ["Solidity", "Web3.js", "Go", "Rust", "AWS"]
-  },
-  {
-    role: "Full Stack Developer",
-    company: "Novatek, Kyiv",
-    period: "August 2019 — February 2021",
+    role: "Machine Learning Engineer & Full Stack Engineer",
+    company: "Meta, Sunnyvale, CA",
+    period: "February 2016 — June 2024",
     type: "Full-time",
-    companyColor: "from-blue-500 to-yellow-600",
-    companyIcon: "cbi:extractor-fan",
-    description: "Participated in Creatio Website Development",
+    companyColor: "from-blue-500 to-blue-700",
+    companyIcon: "logos:meta-icon",
+    description: "Architected large-scale ML ranking and recommendation systems for Ads, Search, and Feed processing billions of daily events.",
     achievements: [
-      "Built responsive frontend with JavaScript, cutting load times by 40% and boosting engagement by 25%",
-      "Optimized backend and database, slashing query times.",
+      "Built ML pipelines with Airflow, Spark, BigQuery, accelerating model iteration velocity by 40%",
+      "Developed deep learning models (DNNs, Transformers) for ad relevance, delivering +8-12% CTR lift globally",
+      "Implemented low-latency inference services using Python, Go, FastAPI, ONNX Runtime achieving P99 < 20ms",
+      "Led development of GenAI/LLM prototypes achieving 90% model accuracy with 25ms latency reduction",
+      "Built internal full-stack tools using React, TypeScript, GraphQL for 100+ engineers",
+      "Implemented computer vision pipelines using PyTorch and OpenCV, reducing classification errors by 50%"
     ],
-    technologies: ["Javascript", "Typescript", "TailwindCSS", "MongoDB", "Express"]
+    technologies: ["PyTorch", "TensorFlow", "React", "TypeScript", "Go", "GraphQL", "Kafka", "Kubernetes"]
+  },
+  {
+    role: "Senior Software Engineer",
+    company: "Yahoo, San Jose, CA",
+    period: "April 2013 — February 2016",
+    type: "Full-time",
+    companyColor: "from-purple-500 to-purple-700",
+    companyIcon: "logos:yahoo",
+    description: "Built content processing and personalization pipelines powering Yahoo Homepage, News Feed, and Yahoo Recommends.",
+    achievements: [
+      "Built full-stack web applications using Python (Django/Flask) improving internal data insights by 25%",
+      "Developed RESTful APIs with Node.js/Express, integrating Kafka-based streams processing 300K+ events with 99.8% reliability",
+      "Designed scalable backend services using Go with Kubernetes, reducing production defects by 80%",
+      "Developed NLP models for news relevance scoring and topic classification, increasing personalization precision by 18%",
+      "Designed CNN-based computer vision models for smart image cropping and content moderation"
+    ],
+    technologies: ["Python", "Java", "Node.js", "Go", "Hadoop", "Spark", "Kafka", "TensorFlow"]
+  },
+  {
+    role: "Research Intern",
+    company: "MIT CSAIL / Toyota TTI / Siemens",
+    period: "2010 — 2012",
+    type: "Internship",
+    companyColor: "from-red-500 to-orange-600",
+    companyIcon: "simple-icons:mit",
+    description: "Conducted applied ML research at leading research institutions during PhD program.",
+    achievements: [
+      "MIT CSAIL: Advanced ML research implementing prototype ML systems using Python and C++",
+      "Toyota TTI: Built computer vision and statistical learning models for visual recognition tasks",
+      "Siemens: Improved pattern recognition accuracy by 15% on industrial datasets using probabilistic models"
+    ],
+    technologies: ["Python", "C++", "MATLAB", "Computer Vision", "Machine Learning"]
   }
 ];
 
@@ -127,7 +134,7 @@ export default function ExperienceSection() {
           tagIcon="solar:case-bold"
           heading="Experience"
           showUnderline={false}
-          description="My professional journey and the impact I've made across different domains"
+          description="16+ years building ML systems at scale for industry leaders"
           centered={true}
         />
 
@@ -294,7 +301,7 @@ export default function ExperienceSection() {
               whileHover={{ scale: 1.05, y: -5 }}
               className="group p-6 md:p-8 rounded-xl md:rounded-2xl bg-gradient-to-br from-blue-50/50 to-blue-100/30 dark:from-blue-950/20 dark:to-blue-900/10 border border-blue-200/30 dark:border-blue-800/20 hover:border-blue-300/50 dark:hover:border-blue-600/30 transition-all duration-500"
             >
-              <div className="text-4xl md:text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">8+</div>
+              <div className="text-4xl md:text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">16+</div>
               <div className="text-gray-600 dark:text-gray-400 font-medium text-base md:text-lg">Years Experience</div>
             </motion.div>
 
@@ -302,16 +309,16 @@ export default function ExperienceSection() {
               whileHover={{ scale: 1.05, y: -5 }}
               className="group p-6 md:p-8 rounded-xl md:rounded-2xl bg-gradient-to-br from-green-50/50 to-green-100/30 dark:from-green-950/20 dark:to-green-900/10 border border-green-200/30 dark:border-green-800/20 hover:border-green-300/50 dark:hover:border-green-600/30 transition-all duration-500"
             >
-              <div className="text-4xl md:text-5xl font-bold text-green-600 dark:text-green-400 mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">50+</div>
-              <div className="text-gray-600 dark:text-gray-400 font-medium text-base md:text-lg">Projects Completed</div>
+              <div className="text-4xl md:text-5xl font-bold text-green-600 dark:text-green-400 mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">100M+</div>
+              <div className="text-gray-600 dark:text-gray-400 font-medium text-base md:text-lg">Users Served</div>
             </motion.div>
 
             <motion.div
               whileHover={{ scale: 1.05, y: -5 }}
               className="group p-6 md:p-8 rounded-xl md:rounded-2xl bg-gradient-to-br from-purple-50/50 to-purple-100/30 dark:from-purple-950/20 dark:to-purple-900/10 border border-purple-200/30 dark:border-purple-800/20 hover:border-purple-300/50 dark:hover:border-purple-600/30 transition-all duration-500 sm:col-span-2 lg:col-span-1"
             >
-              <div className="text-4xl md:text-5xl font-bold text-purple-600 dark:text-purple-400 mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">91%</div>
-              <div className="text-gray-600 dark:text-gray-400 font-medium text-base md:text-lg">Success Rate</div>
+              <div className="text-4xl md:text-5xl font-bold text-purple-600 dark:text-purple-400 mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">PhD</div>
+              <div className="text-gray-600 dark:text-gray-400 font-medium text-base md:text-lg">Computer Science</div>
             </motion.div>
           </div>
         </motion.div>

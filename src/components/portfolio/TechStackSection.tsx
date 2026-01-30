@@ -15,54 +15,104 @@ interface TechItem {
 }
 
 const techStackData: Record<string, TechItem[]> = {
-  "Backend": [
+  "Machine Learning": [
     {
-      name: "Node.js",
-      icon: "devicon:nodejs",
+      name: "PyTorch",
+      icon: "logos:pytorch-icon",
       level: "Expert",
-      category: "Backend",
-      description: "JavaScript runtime for server-side applications",
+      category: "Machine Learning",
+      description: "Deep learning framework for model training and inference",
+      yearsUsed: 8
+    },
+    {
+      name: "TensorFlow",
+      icon: "logos:tensorflow",
+      level: "Expert",
+      category: "Machine Learning",
+      description: "End-to-end ML platform",
+      yearsUsed: 8
+    },
+    {
+      name: "Hugging Face",
+      icon: "noto:hugging-face",
+      level: "Expert",
+      category: "Machine Learning",
+      description: "Transformers and NLP models",
+      yearsUsed: 5
+    },
+    {
+      name: "LangChain",
+      icon: "simple-icons:langchain",
+      level: "Expert",
+      category: "Machine Learning",
+      description: "LLM application framework",
+      yearsUsed: 3
+    },
+    {
+      name: "Scikit-learn",
+      icon: "simple-icons:scikitlearn",
+      level: "Expert",
+      category: "Machine Learning",
+      description: "Classical ML algorithms",
+      yearsUsed: 10
+    },
+    {
+      name: "ONNX Runtime",
+      icon: "simple-icons:onnx",
+      level: "Expert",
+      category: "Machine Learning",
+      description: "Cross-platform inference",
       yearsUsed: 4
     },
+  ],
+  "Backend & APIs": [
     {
       name: "Python",
       icon: "devicon:python",
       level: "Expert",
       category: "Backend",
-      description: "Versatile language for backend and data science",
-      yearsUsed: 5
+      description: "Primary language for ML and backend",
+      yearsUsed: 14
     },
     {
-      name: "Express",
-      icon: "skill-icons:expressjs-dark",
+      name: "Go",
+      icon: "skill-icons:golang",
       level: "Expert",
       category: "Backend",
-      description: "Fast, minimalist web framework for Node.js",
-      yearsUsed: 3
+      description: "High-performance microservices",
+      yearsUsed: 6
     },
     {
-      name: "Django",
-      icon: "material-icon-theme:django",
-      level: "Intermediate",
+      name: "FastAPI",
+      icon: "simple-icons:fastapi",
+      level: "Expert",
       category: "Backend",
-      description: "High-level Python web framework",
-      yearsUsed: 2
+      description: "Modern Python web framework",
+      yearsUsed: 4
+    },
+    {
+      name: "Node.js",
+      icon: "devicon:nodejs",
+      level: "Expert",
+      category: "Backend",
+      description: "JavaScript runtime for APIs",
+      yearsUsed: 8
     },
     {
       name: "GraphQL",
       icon: "logos:graphql",
-      level: "Intermediate",
+      level: "Expert",
       category: "Backend",
       description: "Query language for APIs",
-      yearsUsed: 2
+      yearsUsed: 5
     },
     {
-      name: "Socket.io",
-      icon: "simple-icons:socketdotio",
-      level: "Intermediate",
+      name: "gRPC",
+      icon: "logos:grpc",
+      level: "Expert",
       category: "Backend",
-      description: "Real-time bidirectional event-based communication",
-      yearsUsed: 2
+      description: "High-performance RPC framework",
+      yearsUsed: 5
     },
   ],
   "Frontend": [
@@ -71,166 +121,182 @@ const techStackData: Record<string, TechItem[]> = {
       icon: "skill-icons:react-dark",
       level: "Expert",
       category: "Frontend",
-      description: "Building modern, interactive user interfaces",
-      yearsUsed: 4
-    },
-    {
-      name: "Next.js",
-      icon: "devicon:nextjs",
-      level: "Expert",
-      category: "Frontend",
-      description: "Full-stack React framework for production apps",
-      yearsUsed: 3
+      description: "Component-based UI development",
+      yearsUsed: 7
     },
     {
       name: "TypeScript",
       icon: "devicon:typescript",
       level: "Expert",
       category: "Frontend",
-      description: "Type-safe JavaScript for scalable applications",
+      description: "Type-safe JavaScript",
+      yearsUsed: 6
+    },
+    {
+      name: "Next.js",
+      icon: "devicon:nextjs",
+      level: "Expert",
+      category: "Frontend",
+      description: "React framework for production",
       yearsUsed: 4
     },
     {
-      name: "JavaScript",
-      icon: "devicon:javascript",
+      name: "Redux",
+      icon: "skill-icons:redux",
       level: "Expert",
       category: "Frontend",
-      description: "Core language for web development",
-      yearsUsed: 5
+      description: "State management for React",
+      yearsUsed: 6
+    },
+    {
+      name: "Angular",
+      icon: "devicon:angular",
+      level: "Intermediate",
+      category: "Frontend",
+      description: "Enterprise web framework",
+      yearsUsed: 3
     },
     {
       name: "Tailwind CSS",
       icon: "logos:tailwindcss-icon",
       level: "Expert",
       category: "Frontend",
-      description: "Utility-first CSS framework for rapid UI development",
-      yearsUsed: 3
-    },
-    {
-      name: "Flutter",
-      icon: "devicon:flutter",
-      level: "Intermediate",
-      category: "Frontend",
-      description: "Cross-platform mobile app development",
-      yearsUsed: 2
-    },
-  ],
-  "Database": [
-    {
-      name: "PostgreSQL",
-      icon: "logos:postgresql",
-      level: "Expert",
-      category: "Database",
-      description: "Advanced open-source relational database",
-      yearsUsed: 3
-    },
-    {
-      name: "MongoDB",
-      icon: "devicon:mongodb",
-      level: "Expert",
-      category: "Database",
-      description: "NoSQL document database",
-      yearsUsed: 3
-    },
-    {
-      name: "MySQL",
-      icon: "logos:mysql",
-      level: "Intermediate",
-      category: "Database",
-      description: "Popular open-source relational database",
-      yearsUsed: 3
-    },
-    {
-      name: "Redis",
-      icon: "devicon:redis",
-      level: "Intermediate",
-      category: "Database",
-      description: "In-memory data structure store",
-      yearsUsed: 2
-    },
-    {
-      name: "Prisma",
-      icon: "skill-icons:prisma",
-      level: "Expert",
-      category: "Database",
-      description: "Next-generation ORM for Node.js and TypeScript",
-      yearsUsed: 2
+      description: "Utility-first CSS framework",
+      yearsUsed: 4
     },
   ],
   "Cloud & DevOps": [
     {
       name: "AWS",
       icon: "skill-icons:aws-light",
-      level: "Intermediate",
+      level: "Expert",
       category: "Cloud & DevOps",
-      description: "Amazon Web Services cloud platform",
-      yearsUsed: 2
+      description: "SageMaker, Bedrock, EC2, S3",
+      yearsUsed: 10
     },
     {
       name: "GCP",
       icon: "skill-icons:gcp-light",
-      level: "Intermediate",
-      category: "Cloud & DevOps",
-      description: "Google Cloud Platform services",
-      yearsUsed: 2
-    },
-    {
-      name: "Firebase",
-      icon: "vscode-icons:file-type-firebase",
       level: "Expert",
       category: "Cloud & DevOps",
-      description: "Google's app development platform",
-      yearsUsed: 3
+      description: "BigQuery, Vertex AI, GKE",
+      yearsUsed: 8
+    },
+    {
+      name: "Kubernetes",
+      icon: "logos:kubernetes",
+      level: "Expert",
+      category: "Cloud & DevOps",
+      description: "Container orchestration",
+      yearsUsed: 7
     },
     {
       name: "Docker",
       icon: "devicon:docker",
-      level: "Intermediate",
+      level: "Expert",
       category: "Cloud & DevOps",
       description: "Containerization platform",
-      yearsUsed: 2
+      yearsUsed: 8
     },
     {
-      name: "Git",
-      icon: "devicon:git",
+      name: "GitHub Actions",
+      icon: "skill-icons:githubactions-dark",
       level: "Expert",
       category: "Cloud & DevOps",
-      description: "Version control system",
+      description: "CI/CD automation",
       yearsUsed: 5
     },
+    {
+      name: "Prometheus",
+      icon: "logos:prometheus",
+      level: "Expert",
+      category: "Cloud & DevOps",
+      description: "Monitoring and alerting",
+      yearsUsed: 6
+    },
   ],
-  "Blockchain": [
+  "Data & Databases": [
     {
-      name: "Solidity",
-      icon: "skill-icons:solidity",
+      name: "PostgreSQL",
+      icon: "logos:postgresql",
       level: "Expert",
-      category: "Blockchain",
-      description: "High-level, statically typed language",
+      category: "Database",
+      description: "Relational database",
+      yearsUsed: 12
+    },
+    {
+      name: "MongoDB",
+      icon: "devicon:mongodb",
+      level: "Expert",
+      category: "Database",
+      description: "Document database",
+      yearsUsed: 8
+    },
+    {
+      name: "Redis",
+      icon: "devicon:redis",
+      level: "Expert",
+      category: "Database",
+      description: "In-memory data store",
+      yearsUsed: 8
+    },
+    {
+      name: "BigQuery",
+      icon: "simple-icons:googlebigquery",
+      level: "Expert",
+      category: "Database",
+      description: "Cloud data warehouse",
+      yearsUsed: 6
+    },
+    {
+      name: "Kafka",
+      icon: "logos:kafka-icon",
+      level: "Expert",
+      category: "Database",
+      description: "Event streaming platform",
+      yearsUsed: 7
+    },
+    {
+      name: "Spark",
+      icon: "devicon:apachespark",
+      level: "Expert",
+      category: "Database",
+      description: "Distributed data processing",
+      yearsUsed: 8
+    },
+  ],
+  "Vector Databases": [
+    {
+      name: "FAISS",
+      icon: "simple-icons:meta",
+      level: "Expert",
+      category: "Vector DB",
+      description: "Facebook AI similarity search",
       yearsUsed: 4
     },
     {
-      name: "Go",
-      icon: "skill-icons:golang",
+      name: "Milvus",
+      icon: "simple-icons:milvus",
       level: "Expert",
-      category: "Blockchain",
-      description: "Statically typed, compiled programming language",
+      category: "Vector DB",
+      description: "Open-source vector database",
+      yearsUsed: 3
+    },
+    {
+      name: "Pinecone",
+      icon: "simple-icons:pinecone",
+      level: "Expert",
+      category: "Vector DB",
+      description: "Managed vector database",
       yearsUsed: 2
     },
     {
-      name: "Rust",
-      icon: "skill-icons:rust",
-      level: "Expert",
-      category: "Blockchain",
-      description: "Systems programming language",
+      name: "Weaviate",
+      icon: "simple-icons:weaviate",
+      level: "Intermediate",
+      category: "Vector DB",
+      description: "AI-native vector database",
       yearsUsed: 2
-    },
-    {
-      name: "Web3.js",
-      icon: "devicon:web3js",
-      level: "Expert",
-      category: "Blockchain",
-      description: "JavaScript library for Ethereum blockchain interaction",
-      yearsUsed: 4
     },
   ],
 };
@@ -257,7 +323,7 @@ export default function TechStackSection() {
         tagText="Tech Arsenal"
         tagIcon="solar:settings-bold"
         heading="Technology Stack"
-        description="Technologies I use to bring ideas to life"
+        description="Technologies powering large-scale ML systems and production applications"
         showUnderline={false}
         centered={true}
       />
@@ -356,8 +422,8 @@ function TechCard({
   };
 
   const getExperienceColor = (years: number) => {
-    if (years >= 4) return "text-emerald-600 dark:text-emerald-400";
-    if (years >= 2) return "text-blue-600 dark:text-blue-400";
+    if (years >= 8) return "text-emerald-600 dark:text-emerald-400";
+    if (years >= 4) return "text-blue-600 dark:text-blue-400";
     return "text-amber-600 dark:text-amber-400";
   };
 
@@ -450,4 +516,4 @@ function TechCard({
       </div>
     </motion.div>
   );
-} 
+}

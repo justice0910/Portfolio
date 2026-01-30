@@ -1,12 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 
 export default function Background() {
   const [isMobile, setIsMobile] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768 || 'ontouchstart' in window);
     };
@@ -23,6 +25,17 @@ export default function Background() {
   const animationConfig = isMobile
     ? { duration: 12, ease: "linear" }
     : { duration: 8, ease: "easeInOut" };
+
+  // Pre-generate stable random values for particles (only after mount to avoid hydration mismatch)
+  const particles = useMemo(() => {
+    if (!mounted) return [];
+    return Array.from({ length: 12 }).map(() => ({
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      duration: Math.random() * 2 + 4,
+      delay: Math.random() * 3,
+    }));
+  }, [mounted]);
 
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
@@ -86,14 +99,14 @@ export default function Background() {
         />
       )}
 
-      {/* Reduced floating particles */}
-      {Array.from({ length: particleCount }).map((_, i) => (
+      {/* Reduced floating particles - only render after mount to avoid hydration mismatch */}
+      {particles.slice(0, particleCount).map((particle, i) => (
         <motion.div
           key={i}
           className="absolute w-1 h-1 bg-blue-400/60 rounded-full"
           style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
+            left: `${particle.left}%`,
+            top: `${particle.top}%`,
             willChange: 'transform, opacity',
           }}
           animate={{
@@ -101,9 +114,9 @@ export default function Background() {
             opacity: [0, 1, 0],
           }}
           transition={{
-            duration: Math.random() * 2 + 4,
+            duration: particle.duration,
             repeat: Infinity,
-            delay: Math.random() * 3,
+            delay: particle.delay,
             ease: "linear",
           }}
         />

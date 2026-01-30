@@ -43,7 +43,7 @@ export default function ContactSection() {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
-          to_email: 'ant3678g@gmail.com', // Your email
+          to_email: 'm.chen.dev9@gmail.com',
         },
         publicKey
       );
@@ -73,13 +73,38 @@ export default function ContactSection() {
 
 
         <SectionHeader
-          heading="Let's Work Together"
-          description="Ready to bring your ideas to life? I'm always excited to work on interesting projects and collaborate with amazing people. Let's create something extraordinary together."
+          heading="Let's Connect"
+          description="I'm always interested in discussing new opportunities in AI/ML, large-scale systems, and innovative technology solutions. Whether you're looking for expertise in ML infrastructure, LLM applications, or full-stack development, let's talk."
           tagIcon='solar:chat-line-bold'
           tagText='Contact'
           centered={true}
 
         />
+
+        {/* Contact Info Cards */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-50/90 to-blue-100/50 dark:from-blue-950/30 dark:to-blue-900/20 border border-blue-200/30 dark:border-blue-800/30 text-center">
+            <Icon icon="solar:phone-bold" className="text-blue-600 dark:text-blue-400 mx-auto mb-3" width={28} height={28} />
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Phone</h4>
+            <p className="text-gray-600 dark:text-gray-400 text-sm">+1 917 563 6062</p>
+          </div>
+          <div className="p-6 rounded-2xl bg-gradient-to-br from-purple-50/90 to-purple-100/50 dark:from-purple-950/30 dark:to-purple-900/20 border border-purple-200/30 dark:border-purple-800/30 text-center">
+            <Icon icon="solar:mailbox-bold" className="text-purple-600 dark:text-purple-400 mx-auto mb-3" width={28} height={28} />
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Email</h4>
+            <p className="text-gray-600 dark:text-gray-400 text-sm">m.chen.dev9@gmail.com</p>
+          </div>
+          <div className="p-6 rounded-2xl bg-gradient-to-br from-green-50/90 to-green-100/50 dark:from-green-950/30 dark:to-green-900/20 border border-green-200/30 dark:border-green-800/30 text-center">
+            <Icon icon="solar:map-point-bold" className="text-green-600 dark:text-green-400 mx-auto mb-3" width={28} height={28} />
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Location</h4>
+            <p className="text-gray-600 dark:text-gray-400 text-sm">San Jose, CA</p>
+          </div>
+        </motion.div>
 
         {/* Contact Form */}
         <motion.div
@@ -151,7 +176,7 @@ export default function ContactSection() {
                 value={formData.message}
                 onChange={handleInputChange}
                 className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-all duration-300 resize-none"
-                placeholder="Tell me about your project or idea..."
+                placeholder="Tell me about your project or opportunity..."
               />
             </motion.div>
 
@@ -224,7 +249,7 @@ export default function ContactSection() {
                     <span className="font-medium">Failed to send message</span>
                   </div>
                   <p className="text-red-600 text-left dark:text-red-500 text-sm mt-1">
-                    Please try again or contact me directly at ant3678g@gmail.com
+                    Please try again or contact me directly at m.chen.dev9@gmail.com
                   </p>
                   {/* add a button to close the message */}
                   <button
@@ -247,15 +272,26 @@ export default function ContactSection() {
           transition={{ duration: 0.8, delay: 1.1 }}
           viewport={{ once: true }}
         >
-          <p className="text-gray-600 dark:text-gray-400 mb-6">Or reach out directly:</p>
+          <p className="text-gray-600 dark:text-gray-400 mb-6">Or connect with me directly:</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
-                href="mailto:ant3678g@gmail.com"
+                href="mailto:m.chen.dev9@gmail.com"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 border-2 border-gray-300 hover:border-gray-400 dark:border-gray-600 dark:hover:border-gray-500 rounded-xl font-medium transition-all duration-300 shadow-md hover:shadow-lg"
               >
                 <Icon icon="solar:mailbox-bold-duotone" width={18} height={18} />
                 Send Email
+              </Link>
+            </motion.div>
+
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Link
+                href="https://www.linkedin.com/in/michael-chen-b525ab34/"
+                target="_blank"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 border-2 border-gray-300 hover:border-gray-400 dark:border-gray-600 dark:hover:border-gray-500 rounded-xl font-medium transition-all duration-300 shadow-md hover:shadow-lg"
+              >
+                <Icon icon="skill-icons:linkedin" width={18} height={18} />
+                LinkedIn
               </Link>
             </motion.div>
 
@@ -273,4 +309,4 @@ export default function ContactSection() {
       </div>
     </motion.section>
   );
-} 
+}
