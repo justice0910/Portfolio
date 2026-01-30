@@ -1,4 +1,4 @@
-# 🚀 Anton Ryschchuck - Portfolio
+# 🚀 Michael Chen - Portfolio
 
 A stunning, modern portfolio website built with cutting-edge technologies and beautiful animations inspired by Aceternity UI design principles.
 
