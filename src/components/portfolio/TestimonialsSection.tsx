@@ -29,7 +29,7 @@ interface FeaturedTestimonialProps {
 
 const testimonials = [
   {
-    content: "Michael's expertise in building large-scale ML systems is exceptional. His work on our recommendation platform significantly improved user engagement metrics across the board.",
+    content: "Daozheng's expertise in building large-scale ML systems is exceptional. His work on our recommendation platform significantly improved user engagement metrics across the board.",
     author: "Sarah Johnson",
     role: "Engineering Director",
     company: "Meta",
@@ -39,7 +39,7 @@ const testimonials = [
     featured: true
   },
   {
-    content: "Michael led the development of our LLM-powered search system with remarkable efficiency. His deep understanding of both ML and production systems is rare.",
+    content: "Daozheng led the development of our LLM-powered search system with remarkable efficiency. His deep understanding of both ML and production systems is rare.",
     author: "Yi Fan",
     role: "VP of Engineering",
     company: "Yahoo",
@@ -48,7 +48,7 @@ const testimonials = [
     avatar: "DP"
   },
   {
-    content: "Working with Michael on our inference infrastructure was transformative. He reduced latency by 35% while maintaining reliability at scale.",
+    content: "Working with Daozheng on our inference infrastructure was transformative. He reduced latency by 35% while maintaining reliability at scale.",
     author: "Jamal Martin",
     role: "Staff Engineer",
     company: "Meta",
@@ -57,7 +57,7 @@ const testimonials = [
     avatar: "JL"
   },
   {
-    content: "Michael's ability to bridge research and production is outstanding. He turned our experimental models into production-ready systems serving millions.",
+    content: "Daozheng's ability to bridge research and production is outstanding. He turned our experimental models into production-ready systems serving millions.",
     author: "Januard Soterana",
     role: "Research Scientist",
     company: "Yahoo",

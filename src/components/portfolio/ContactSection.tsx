@@ -43,7 +43,7 @@ export default function ContactSection() {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
-          to_email: 'm.chen.dev9@gmail.com',
+          to_email: 'dzh.chen.ai@gmail.com',
         },
         publicKey
       );
@@ -92,12 +92,12 @@ export default function ContactSection() {
           <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-50/90 to-blue-100/50 dark:from-blue-950/30 dark:to-blue-900/20 border border-blue-200/30 dark:border-blue-800/30 text-center">
             <Icon icon="solar:phone-bold" className="text-blue-600 dark:text-blue-400 mx-auto mb-3" width={28} height={28} />
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Phone</h4>
-            <p className="text-gray-600 dark:text-gray-400 text-sm">+1 917 563 6062</p>
+            <p className="text-gray-600 dark:text-gray-400 text-sm">+1 408 786 2961</p>
           </div>
           <div className="p-6 rounded-2xl bg-gradient-to-br from-purple-50/90 to-purple-100/50 dark:from-purple-950/30 dark:to-purple-900/20 border border-purple-200/30 dark:border-purple-800/30 text-center">
             <Icon icon="solar:mailbox-bold" className="text-purple-600 dark:text-purple-400 mx-auto mb-3" width={28} height={28} />
             <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Email</h4>
-            <p className="text-gray-600 dark:text-gray-400 text-sm">m.chen.dev9@gmail.com</p>
+            <p className="text-gray-600 dark:text-gray-400 text-sm">dzh.chen.ai@gmail.com</p>
           </div>
           <div className="p-6 rounded-2xl bg-gradient-to-br from-green-50/90 to-green-100/50 dark:from-green-950/30 dark:to-green-900/20 border border-green-200/30 dark:border-green-800/30 text-center">
             <Icon icon="solar:map-point-bold" className="text-green-600 dark:text-green-400 mx-auto mb-3" width={28} height={28} />
@@ -249,7 +249,7 @@ export default function ContactSection() {
                     <span className="font-medium">Failed to send message</span>
                   </div>
                   <p className="text-red-600 text-left dark:text-red-500 text-sm mt-1">
-                    Please try again or contact me directly at m.chen.dev9@gmail.com
+                    Please try again or contact me directly at dzh.chen.ai@gmail.com
                   </p>
                   {/* add a button to close the message */}
                   <button
@@ -276,7 +276,7 @@ export default function ContactSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
-                href="mailto:m.chen.dev9@gmail.com"
+                href="mailto:dzh.chen.ai@gmail.com"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 border-2 border-gray-300 hover:border-gray-400 dark:border-gray-600 dark:hover:border-gray-500 rounded-xl font-medium transition-all duration-300 shadow-md hover:shadow-lg"
               >
                 <Icon icon="solar:mailbox-bold-duotone" width={18} height={18} />

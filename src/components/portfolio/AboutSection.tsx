@@ -15,7 +15,7 @@ export default function AboutSection() {
       <h2 className="text-2xl font-bold mb-6">About</h2>
       <div className="max-w-none">
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Hello, World! I am Michael Chen — a Senior AI/ML and Full-Stack Engineer
+          Hello, World! I am Daozheng Chen — a Senior AI/ML and Full-Stack Engineer
           with 16+ years of experience designing and delivering large-scale machine learning platforms,
           LLM-powered search systems, and recommendation infrastructures at Meta and Yahoo.
         </p>
